@@ -1,0 +1,460 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Endre_navn_pa_filer" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mv="clr-namespace:Microsoft.VisualBasic;assembly=Microsoft.VisualBasic" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="ledigFileName1" Type="OutArgument(x:String)" />
+    <x:Property Name="ledigFileName2" Type="OutArgument(x:String)" />
+    <x:Property Name="ledigFileName3" Type="OutArgument(x:String)" />
+    <x:Property Name="ledigFileName4" Type="OutArgument(x:String)" />
+    <x:Property Name="ledigFileName5" Type="OutArgument(x:String)" />
+    <x:Property Name="opptattFileName1" Type="OutArgument(x:String)" />
+    <x:Property Name="opptattFileName2" Type="OutArgument(x:String)" />
+    <x:Property Name="opptattFileName3" Type="OutArgument(x:String)" />
+    <x:Property Name="opptattFileName4" Type="OutArgument(x:String)" />
+    <x:Property Name="opptattFileName5" Type="OutArgument(x:String)" />
+    <x:Property Name="logBane" Type="InArgument(x:String)" />
+    <x:Property Name="loggfil" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>888,2129</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Endre_navn_pa_filer_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="480,2064" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch Endrer navn på opptatt-filene til Opptatt" sap:VirtualizedContainerService.HintSize="438,1972" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+      <TryCatch.Try>
+        <Sequence DisplayName="Endre_navn_pa_filer" sap:VirtualizedContainerService.HintSize="376,1723" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message Endrer navn på filene til 'opptatt'" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Endrer navn på filene til 'opptatt'&quot;]" />
+          <ui:MultipleAssign sap2010:Annotation.AnnotationText="Argumenter: " DisplayName="Multiple Assign FileName-argumenter" sap:VirtualizedContainerService.HintSize="334,408" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+            <ui:MultipleAssign.AssignOperations>
+              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[opptattFileName1]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">["_"+Config("opptattFileName").ToString+"_.txt"]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[opptattFileName2]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">["_"+Config("opptattFileName").ToString+"__.txt"]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[opptattFileName3]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">["_"+Config("opptattFileName").ToString+"___.txt"]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[opptattFileName4]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">["_"+Config("opptattFileName").ToString+"____.txt"]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[opptattFileName5]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">["_"+Config("opptattFileName").ToString+"_____.txt"]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[ledigFileName1]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">["_"+Config("ledigFileName").ToString+"_.txt"]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[ledigFileName2]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">["_"+Config("ledigFileName").ToString+"__.txt"]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[ledigFileName3]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">["_"+Config("ledigFileName").ToString+"___.txt"]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[ledigFileName4]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">["_"+Config("ledigFileName").ToString+"____.txt"]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[ledigFileName5]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">["_"+Config("ledigFileName").ToString+"_____.txt"]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+              </scg:List>
+            </ui:MultipleAssign.AssignOperations>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:MultipleAssign>
+          <InvokeMethod DisplayName="Invoke Method Skift navn på fil1" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="Rename" TargetType="mv:FileSystem">
+            <InArgument x:TypeArguments="x:String">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ledigFileName1" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="opptattFileName1" />
+            </InArgument>
+          </InvokeMethod>
+          <InvokeMethod DisplayName="Invoke Method Skift navn på fil2" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="Rename" TargetType="mv:FileSystem">
+            <InArgument x:TypeArguments="x:String">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ledigFileName2" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="opptattFileName2" />
+            </InArgument>
+          </InvokeMethod>
+          <InvokeMethod DisplayName="Invoke Method Skift navn på fil3" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" MethodName="Rename" TargetType="mv:FileSystem">
+            <InArgument x:TypeArguments="x:String">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ledigFileName3" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="opptattFileName3" />
+            </InArgument>
+          </InvokeMethod>
+          <InvokeMethod DisplayName="Invoke Method Skift navn på fil4" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="InvokeMethod_4" MethodName="Rename" TargetType="mv:FileSystem">
+            <InArgument x:TypeArguments="x:String">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ledigFileName4" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="opptattFileName4" />
+            </InArgument>
+          </InvokeMethod>
+          <InvokeMethod DisplayName="Invoke Method Skift navn på fil5" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="InvokeMethod_5" MethodName="Rename" TargetType="mv:FileSystem">
+            <InArgument x:TypeArguments="x:String">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ledigFileName5" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="opptattFileName5" />
+            </InArgument>
+          </InvokeMethod>
+          <ui:LogMessage DisplayName="Log Message Filnavnene er endret til 'opptatt'" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Filnavnene er endret til 'Opptatt'&quot;]" />
+          <TryCatch DisplayName="LoggEntry (Try Catch) " sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+            <TryCatch.Variables>
+              <Variable x:TypeArguments="x:String" Name="loggTekst" />
+            </TryCatch.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <TryCatch.Try>
+              <Sequence DisplayName="Sequence logging" sap:VirtualizedContainerService.HintSize="418,489" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence DisplayName="Sequence Ny LoggLinje " sap:VirtualizedContainerService.HintSize="376,397" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap2010:Annotation.AnnotationText="(loggTekst som Variable)" DisplayName="Assign loggfilTekst" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[loggTekst]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">Varselfilene er endret til 'Opptatt'</InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                  <ui:AppendLine sap2010:Annotation.AnnotationText="Config som in-argument og datatable&#xA;LogFil som in-argument og string" DisplayName="Append Line i loggfil" FileName="[logBane + loggfil]" sap:VirtualizedContainerService.HintSize="334,174" sap2010:WorkflowViewState.IdRef="AppendLine_1" Text="[System.DateTime.now.ToString(&quot;HH:mm:ss.fff&quot;) +&quot; &quot;+ loggTekst]" UseDefaultEncoding="False">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:AppendLine>
+                </Sequence>
+              </Sequence>
+            </TryCatch.Try>
+            <TryCatch.Catches>
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422,21" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ActivityAction x:TypeArguments="s:Exception">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                  </ActivityAction.Argument>
+                  <Sequence sap:VirtualizedContainerService.HintSize="376,183" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message (Catch) Fikk ikke kontakt med loggfil :-/" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Fikk ikke kontakt med loggfil :-/&quot;]" />
+                  </Sequence>
+                </ActivityAction>
+              </Catch>
+            </TryCatch.Catches>
+          </TryCatch>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="si:IOException" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="si:IOException">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="si:IOException" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence sap:VirtualizedContainerService.HintSize="376,408" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message Fikk ikke endret navn på Opptatt-filene!" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Fikk ikke endret navn på Opptatt-filene!&quot;]" />
+              <Sequence DisplayName="Sequence logging" sap:VirtualizedContainerService.HintSize="334,66" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:String" Name="loggTekst" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence DisplayName="Sequence Ny LoggLinje " sap:VirtualizedContainerService.HintSize="376,397" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap2010:Annotation.AnnotationText="(loggTekst som Variable)" DisplayName="Assign loggfilTekst" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[loggTekst]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">Fikk ikke endret varselfilene er til 'Opptatt', prosessen termineres</InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                  <ui:AppendLine sap2010:Annotation.AnnotationText="Config som in-argument og datatable&#xA;LogFil som in-argument og string" DisplayName="Append Line i loggfil" FileName="[logBane + loggfil]" sap:VirtualizedContainerService.HintSize="334,174" sap2010:WorkflowViewState.IdRef="AppendLine_2" Text="[System.DateTime.now.ToString(&quot;HH:mm:ss.fff&quot;) +&quot; &quot;+ loggTekst]" UseDefaultEncoding="False">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:AppendLine>
+                </Sequence>
+              </Sequence>
+              <TerminateWorkflow sap2010:Annotation.AnnotationText="Fikk ikke endret navn på Opptatt-filene. Prosess termineres!" DisplayName="Terminate Workflow" Exception="[new Exception(&quot;Fikk ikke endret navn på Opptatt-filene. Prosess termineres!&quot;)]" sap:VirtualizedContainerService.HintSize="334,79" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_3" Reason="Fikk ikke endret navn på Opptatt-filene. Prosess termineres!">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </TerminateWorkflow>
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence sap:VirtualizedContainerService.HintSize="376,408" sap2010:WorkflowViewState.IdRef="Sequence_8">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message Fikk ikke endret navn på Opptatt-filene!" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Fikk ikke endret navn på Opptatt-filene!&quot;]" />
+              <Sequence DisplayName="Sequence logging" sap:VirtualizedContainerService.HintSize="334,66" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence DisplayName="Sequence Ny LoggLinje " sap:VirtualizedContainerService.HintSize="376,397" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="loggTekst" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap2010:Annotation.AnnotationText="(loggTekst som Variable)" DisplayName="Assign loggfilTekst" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="Assign_3">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[loggTekst]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">Fikk ikke endret varselfilene er til 'Opptatt', prosessen termineres</InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                  <ui:AppendLine sap2010:Annotation.AnnotationText="Config som in-argument og datatable&#xA;LogFil som in-argument og string" DisplayName="Append Line i loggfil" FileName="[logBane + loggfil]" sap:VirtualizedContainerService.HintSize="334,174" sap2010:WorkflowViewState.IdRef="AppendLine_3" Text="[System.DateTime.now.ToString(&quot;HH:mm:ss.fff&quot;) +&quot; &quot;+ loggTekst]" UseDefaultEncoding="False">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:AppendLine>
+                </Sequence>
+              </Sequence>
+              <TerminateWorkflow sap2010:Annotation.AnnotationText="Fikk ikke endret navn på Opptatt-filene. Prosess termineres!" DisplayName="Terminate Workflow" Exception="[new Exception(&quot;Fikk ikke endret navn på Opptatt-filene. Prosess termineres!&quot;)]" sap:VirtualizedContainerService.HintSize="334,79" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_4" Reason="Fikk ikke endret navn på Opptatt-filene. Prosess termineres!">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </TerminateWorkflow>
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+      <TryCatch.Finally>
+        <Sequence sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message 3 sek" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;3 sekunder pause&quot;]" />
+          <Delay DisplayName="Delay 3 sek" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+        </Sequence>
+      </TryCatch.Finally>
+    </TryCatch>
+  </Sequence>
+</Activity>

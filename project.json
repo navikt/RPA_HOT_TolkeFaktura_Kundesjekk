@@ -1,0 +1,68 @@
+{
+  "name": "TolkFakturaKundesjekk",
+  "description": "Her kontrollerer vi at forespørselen inneholder de opplysningene vi trenger for å fakturere. Om ikke sender vi en e-post til formidler. Etterpå laster vi opp alle de arbeidsordrene som nå er klar for fakturering.",
+  "main": "Process.xaml",
+  "dependencies": {
+    "NAV_RPAGenerellLibrary": "[1.2.1]",
+    "NAV_SendMail": "[1.0.1]",
+    "UiPath.Excel.Activities": "[2.9.3]",
+    "UiPath.Java.Activities": "[1.0.6863.33114]",
+    "UiPath.Mail.Activities": "[1.9.3]",
+    "UiPath.Salesforce.Activities": "[1.5.2]",
+    "UiPath.System.Activities": "[20.10.1]",
+    "UiPath.UIAutomation.Activities": "[20.10.6]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "20.10.2.0",
+  "projectVersion": "1.0.55",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": false
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "5af712e7-d85d-40e4-b69e-4dd519d4dda0",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Process.xaml",
+      "uniqueId": "34240948-2833-4bbf-8a69-1d27dcc79184",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Legacy"
+}
