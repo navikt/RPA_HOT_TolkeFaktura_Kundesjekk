@@ -18,7 +18,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1689,4972</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2335,4957</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="33">
@@ -92,7 +92,7 @@
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Tolk Faktura Kundesjekk&#xA;https://stash.adeo.no/scm/rpa/tolkfakturakundesjekk.git&#xA;&#xA; &#xA;Overtatt som utvikler: Bjørn Rønnestad, bruk Teams! ved kontakt&#xA;&#xA; &#xA;-------------------------------------------------------------&#xA;I denne prosessen er det Process som er main workflow. (Starter derfor akkurat her.)&#xA;-------------------------------------------------------------&#xA;&#xA;&#xA;2205271536: Påstartet logging, fortsett her&#xA;2205300036: Rettet opp alle Config-steder til DataTable. &#xA;2206231337: Sluttført å legge inn loggmeldinger, + en sjekk av e-post&#xA;2206231440: Ser ut til at alt rundt Config skal være løst nå..&#xA;2206240936: Slått av visible på Excel Scopes, rettet litt info&#xA;2207041337: Endret en teller&#xA;2207071445: Lagt inn sjekk av at excelfiler er tilgjengelige for prosessen&#xA;2208081046: Config styrer nå om det sendes varsel om feil til formidlere&#xA;2208081239: en sjekk av innhold i DT på AAAAAA (skal fjernes igjen etter sjekk)&#xA;2208081305: Lagt inn en sjekk av innhold i DT også etter filtreringen&#xA;2208211600: Store problemer med å sortere ut fra SistHåndterteForespørsler pga forskjellige datoformater&#xA;2208211645: Satt e-post til formidler = Ja (Config)&#xA;2208211710: Nei, det så rart ut. Setter tilbake til Nei pr. nå. &#xA;2208302124: Endret bane på logs til S&#xA;2211131416: Måtte ha alternaitve False i sortering, Ryddet litt i e-post, som nå iverksettes&#xD;&#xA;2211272205: Skal ikke ha noe å si, men satt Ja på e-post i config::: For: Nå skal dette styres av asset i Orchestrator. Mrk: Det vil alltid gå ut nye, dette gjelder kun pruringer&#xA;" DisplayName="Process" sap:VirtualizedContainerService.HintSize="911,4907" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Tolk Faktura Kundesjekk&#xA;https://stash.adeo.no/scm/rpa/tolkfakturakundesjekk.git&#xA;&#xA; &#xA;Overtatt som utvikler: Bjørn Rønnestad, bruk Teams! ved kontakt&#xA;&#xA; &#xA;-------------------------------------------------------------&#xA;I denne prosessen er det Process som er main workflow. (Starter derfor akkurat her.)&#xA;-------------------------------------------------------------&#xA;&#xA;&#xA;2205271536: Påstartet logging, fortsett her&#xA;2205300036: Rettet opp alle Config-steder til DataTable. &#xA;2206231337: Sluttført å legge inn loggmeldinger, + en sjekk av e-post&#xA;2206231440: Ser ut til at alt rundt Config skal være løst nå..&#xA;2206240936: Slått av visible på Excel Scopes, rettet litt info&#xA;2207041337: Endret en teller&#xA;2207071445: Lagt inn sjekk av at excelfiler er tilgjengelige for prosessen&#xA;2208081046: Config styrer nå om det sendes varsel om feil til formidlere&#xA;2208081239: en sjekk av innhold i DT på AAAAAA (skal fjernes igjen etter sjekk)&#xA;2208081305: Lagt inn en sjekk av innhold i DT også etter filtreringen&#xA;2208211600: Store problemer med å sortere ut fra SistHåndterteForespørsler pga forskjellige datoformater&#xA;2208211645: Satt e-post til formidler = Ja (Config)&#xA;2208211710: Nei, det så rart ut. Setter tilbake til Nei pr. nå. &#xA;2208302124: Endret bane på logs til S&#xA;2211131416: Måtte ha alternaitve False i sortering, Ryddet litt i e-post, som nå iverksettes&#xA;2211272205: Skal ikke ha noe å si, men satt Ja på e-post i config::: For: Nå skal dette styres av asset i Orchestrator.&#xA;" DisplayName="Process" sap:VirtualizedContainerService.HintSize="911,4892" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ss:SecureString" Name="exchangePassword" />
       <Variable x:TypeArguments="x:String" Name="exchangeUsername" />
@@ -147,15 +147,15 @@
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
-    <ui:CommentOut sap2010:Annotation.AnnotationText="Tidligere ble utsending av melding til formidlere styrt fra Config. Dette er nå flyttet til asset i Orchestrator.&#xD;&#xA;Kutter derfor nå ut denne sekvensen her" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="869,153" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+    <ui:CommentOut sap2010:Annotation.AnnotationText="Tidligere ble utsending av melding til formidlere styrt fra Config. Dette er nå flyttet til asset i Orchestrator.&#xA;Kutter derfor nå ut denne sekvensen her" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="869,153" sap2010:WorkflowViewState.IdRef="CommentOut_2">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,200" sap2010:WorkflowViewState.IdRef="Sequence_28">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="705,848" sap2010:WorkflowViewState.IdRef="Sequence_28">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap2010:Annotation.AnnotationText="Setter parameter for eventuell varsling til formidler" DisplayName="Setter parameter for eventuell varsling til formidler" sap:VirtualizedContainerService.HintSize="200,108" sap2010:WorkflowViewState.IdRef="Sequence_17">
+          <Sequence sap2010:Annotation.AnnotationText="Setter parameter for eventuell varsling til formidler" DisplayName="Setter parameter for eventuell varsling til formidler" sap:VirtualizedContainerService.HintSize="259,108" sap2010:WorkflowViewState.IdRef="Sequence_17">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="varsleKriterie" />
             </Sequence.Variables>
