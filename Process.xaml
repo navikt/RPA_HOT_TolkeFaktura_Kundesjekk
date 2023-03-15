@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Process" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Process" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Transaction item to be processed." Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(sd:DataTable)" />
@@ -18,10 +18,10 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2335,4957</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2552,5150</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="33">
+    <scg:List x:TypeArguments="x:String" Capacity="66">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -55,10 +55,13 @@
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="31">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="62">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -90,9 +93,10 @@
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Tolk Faktura Kundesjekk&#xA;https://stash.adeo.no/scm/rpa/tolkfakturakundesjekk.git&#xA;&#xA; &#xA;Overtatt som utvikler: Bjørn Rønnestad, bruk Teams! ved kontakt&#xA;&#xA; &#xA;-------------------------------------------------------------&#xA;I denne prosessen er det Process som er main workflow. (Starter derfor akkurat her.)&#xA;-------------------------------------------------------------&#xA;&#xA;&#xA;2205271536: Påstartet logging, fortsett her&#xA;2205300036: Rettet opp alle Config-steder til DataTable. &#xA;2206231337: Sluttført å legge inn loggmeldinger, + en sjekk av e-post&#xA;2206231440: Ser ut til at alt rundt Config skal være løst nå..&#xA;2206240936: Slått av visible på Excel Scopes, rettet litt info&#xA;2207041337: Endret en teller&#xA;2207071445: Lagt inn sjekk av at excelfiler er tilgjengelige for prosessen&#xA;2208081046: Config styrer nå om det sendes varsel om feil til formidlere&#xA;2208081239: en sjekk av innhold i DT på AAAAAA (skal fjernes igjen etter sjekk)&#xA;2208081305: Lagt inn en sjekk av innhold i DT også etter filtreringen&#xA;2208211600: Store problemer med å sortere ut fra SistHåndterteForespørsler pga forskjellige datoformater&#xA;2208211645: Satt e-post til formidler = Ja (Config)&#xA;2208211710: Nei, det så rart ut. Setter tilbake til Nei pr. nå. &#xA;2208302124: Endret bane på logs til S&#xA;2211131416: Måtte ha alternaitve False i sortering, Ryddet litt i e-post, som nå iverksettes&#xA;2211272205: Skal ikke ha noe å si, men satt Ja på e-post i config::: For: Nå skal dette styres av asset i Orchestrator.&#xA;" DisplayName="Process" sap:VirtualizedContainerService.HintSize="911,4892" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Tolk Faktura Kundesjekk&#xA;https://stash.adeo.no/scm/rpa/tolkfakturakundesjekk.git&#xA;&#xA; &#xA;Overtatt som utvikler: Bjørn Rønnestad, bruk Teams! ved kontakt&#xA;&#xA; &#xA;-------------------------------------------------------------&#xA;I denne prosessen er det Process som er main workflow. (Starter derfor akkurat her.)&#xA;-------------------------------------------------------------&#xA;&#xA;&#xA;2205271536: Påstartet logging, fortsett her&#xA;2205300036: Rettet opp alle Config-steder til DataTable. &#xA;2206231337: Sluttført å legge inn loggmeldinger, + en sjekk av e-post&#xA;2206231440: Ser ut til at alt rundt Config skal være løst nå..&#xA;2206240936: Slått av visible på Excel Scopes, rettet litt info&#xA;2207041337: Endret en teller&#xA;2207071445: Lagt inn sjekk av at excelfiler er tilgjengelige for prosessen&#xA;2208081046: Config styrer nå om det sendes varsel om feil til formidlere&#xA;2208081239: en sjekk av innhold i DT på AAAAAA (skal fjernes igjen etter sjekk)&#xA;2208081305: Lagt inn en sjekk av innhold i DT også etter filtreringen&#xA;2208211600: Store problemer med å sortere ut fra SistHåndterteForespørsler pga forskjellige datoformater&#xA;2208211645: Satt e-post til formidler = Ja (Config)&#xA;2208211710: Nei, det så rart ut. Setter tilbake til Nei pr. nå. &#xA;2208302124: Endret bane på logs til S&#xA;2211131416: Måtte ha alternaitve False i sortering, Ryddet litt i e-post, som nå iverksettes&#xA;2211272205: Skal ikke ha noe å si, men satt Ja på e-post i config::: For: Nå skal dette styres av asset i Orchestrator.&#xA;2303081333: Midlertidig bruk av prosessen: Til å gå gjennom og sjekke om Arbeidsordre som påstås skal ligge i OeBS FAKTISK ligger i OeBS&#xA;2303091047: MIdlertidig bruk av prosessen: Fordi det feiler om og om igjen (så jeg ikke får excelfil), skrives nå ti og ti linjer til excel i stedet. &#xA;" DisplayName="Process" sap:VirtualizedContainerService.HintSize="911,5085" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ss:SecureString" Name="exchangePassword" />
       <Variable x:TypeArguments="x:String" Name="exchangeUsername" />
@@ -106,12 +110,160 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Forbereder for logging" sap:VirtualizedContainerService.HintSize="869,907" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="Forbereder for logging" sap:VirtualizedContainerService.HintSize="869,1070" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
+      <ui:CommentOut sap2010:Annotation.AnnotationText="Midlertidig prosess-snutt. Les om denne ved å gå inn i den første sequencen i denne Comment Out'en" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,123" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="Sekvens" sap:VirtualizedContainerService.HintSize="284,356" sap2010:WorkflowViewState.IdRef="Sequence_34">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="LES OM DENNE SNUTTE HER" sap:VirtualizedContainerService.HintSize="242,66" sap2010:WorkflowViewState.IdRef="Sequence_33">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Sequence sap2010:Annotation.AnnotationText="Dette er en snutt som er brukt bare for å hente frem oppdrag som påstås ligger i OeBS (av OpprettOgLagre-prosessen), men som ikke ligger i OeBS. Noen er selvfølgelig rettmessige, men kan ikke være alle. Prosessen fant 8500 oppdrag som påstås ligger i OeBS, men som ikke gjør det." sap:VirtualizedContainerService.HintSize="200,260" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Sequence>
+            </Sequence>
+            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,158" sap2010:WorkflowViewState.IdRef="Sequence_32">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Sequence DisplayName="Let gjennom OeBS" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke SjekkFraLoggfil workflow" sap:VirtualizedContainerService.HintSize="696,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Spesielt\z\SjekkerInformasjonFraLoggfil\SjekkFraLoggfil.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <Sequence sap2010:Annotation.AnnotationText="Evighet (stoppes manuelt av utvikler)" DisplayName="Evighet (stoppes manuelt av utvikler)" sap:VirtualizedContainerService.HintSize="696,759" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Flowchart sap:VirtualizedContainerService.HintSize="654,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+                        <av:Size x:Key="ShapeSize">60,75</av:Size>
+                        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 300.016666666667,107.5 300.016666666667,117.5</av:PointCollection>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        <x:Double x:Key="Width">619.5</x:Double>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Flowchart.StartNode>
+                      <x:Reference>__ReferenceID3</x:Reference>
+                    </Flowchart.StartNode>
+                    <FlowDecision x:Name="__ReferenceID0" Condition="[1 = 1]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <av:Point x:Key="ShapeLocation">260.5,406.5</av:Point>
+                          <av:Size x:Key="ShapeSize">79,87</av:Size>
+                          <av:PointCollection x:Key="TrueConnector">260.5,450 170,450 170,310 200,310</av:PointCollection>
+                          <av:PointCollection x:Key="FalseConnector">339.5,450 369.5,450 369.5,449.52 389.5,449.52</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <FlowDecision.True>
+                        <FlowStep x:Name="__ReferenceID1">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">200,277</av:Point>
+                              <av:Size x:Key="ShapeSize">200,66</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">300,343 300,406.5</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Sequence>
+                          <FlowStep.Next>
+                            <x:Reference>__ReferenceID0</x:Reference>
+                          </FlowStep.Next>
+                        </FlowStep>
+                      </FlowDecision.True>
+                      <FlowDecision.False>
+                        <FlowStep x:Name="__ReferenceID2">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">389.5,419.02</av:Point>
+                              <av:Size x:Key="ShapeSize">230,61</av:Size>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <WriteLine DisplayName="Write Line Sjekkpost: Aldri gått videre" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="Sjekkpost: Aldri gått videre">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </WriteLine>
+                        </FlowStep>
+                      </FlowDecision.False>
+                    </FlowDecision>
+                    <x:Reference>__ReferenceID1</x:Reference>
+                    <FlowStep x:Name="__ReferenceID3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">185.016666666667,117.5</av:Point>
+                          <av:Size x:Key="ShapeSize">230,61</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">300.016666666667,178.5 300.016666666667,208.5 300,208.5 300,277</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <WriteLine DisplayName="Write Line Avventer at utvikler avbryter prosessen manuelt" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Avventer at utvikler avbryter prosessen manuelt">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </WriteLine>
+                      <FlowStep.Next>
+                        <x:Reference>__ReferenceID1</x:Reference>
+                      </FlowStep.Next>
+                    </FlowStep>
+                    <x:Reference>__ReferenceID2</x:Reference>
+                  </Flowchart>
+                </Sequence>
+              </Sequence>
+            </Sequence>
+          </Sequence>
+        </ui:CommentOut.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:CommentOut>
       <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
       <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke init workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="init.xaml">
         <ui:InvokeWorkflowFile.Arguments>
@@ -149,13 +301,13 @@
     </Sequence>
     <ui:CommentOut sap2010:Annotation.AnnotationText="Tidligere ble utsending av melding til formidlere styrt fra Config. Dette er nå flyttet til asset i Orchestrator.&#xA;Kutter derfor nå ut denne sekvensen her" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="869,153" sap2010:WorkflowViewState.IdRef="CommentOut_2">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="705,848" sap2010:WorkflowViewState.IdRef="Sequence_28">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="705,189" sap2010:WorkflowViewState.IdRef="Sequence_28">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap2010:Annotation.AnnotationText="Setter parameter for eventuell varsling til formidler" DisplayName="Setter parameter for eventuell varsling til formidler" sap:VirtualizedContainerService.HintSize="259,108" sap2010:WorkflowViewState.IdRef="Sequence_17">
+          <Sequence sap2010:Annotation.AnnotationText="Setter parameter for eventuell varsling til formidler" DisplayName="Setter parameter for eventuell varsling til formidler" sap:VirtualizedContainerService.HintSize="227,108" sap2010:WorkflowViewState.IdRef="Sequence_17">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="varsleKriterie" />
             </Sequence.Variables>
