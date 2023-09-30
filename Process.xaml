@@ -18,7 +18,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2849,5195</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2079,5439</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="66">
@@ -94,9 +94,10 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Tolk Faktura Kundesjekk&#xA;https://stash.adeo.no/scm/rpa/tolkfakturakundesjekk.git&#xA;&#xA; &#xA;Overtatt som utvikler: Bjørn Rønnestad, bruk Teams! ved kontakt&#xA;&#xA; &#xA;-------------------------------------------------------------&#xA;I denne prosessen er det Process som er main workflow. (Starter derfor akkurat her.)&#xA;-------------------------------------------------------------&#xA;&#xA;&#xA;2205271536: Påstartet logging, fortsett her&#xA;2205300036: Rettet opp alle Config-steder til DataTable. &#xA;2206231337: Sluttført å legge inn loggmeldinger, + en sjekk av e-post&#xA;2206231440: Ser ut til at alt rundt Config skal være løst nå..&#xA;2206240936: Slått av visible på Excel Scopes, rettet litt info&#xA;2207041337: Endret en teller&#xA;2207071445: Lagt inn sjekk av at excelfiler er tilgjengelige for prosessen&#xA;2208081046: Config styrer nå om det sendes varsel om feil til formidlere&#xA;2208081239: en sjekk av innhold i DT på AAAAAA (skal fjernes igjen etter sjekk)&#xA;2208081305: Lagt inn en sjekk av innhold i DT også etter filtreringen&#xA;2208211600: Store problemer med å sortere ut fra SistHåndterteForespørsler pga forskjellige datoformater&#xA;2208211645: Satt e-post til formidler = Ja (Config)&#xA;2208211710: Nei, det så rart ut. Setter tilbake til Nei pr. nå. &#xA;2208302124: Endret bane på logs til S&#xA;2211131416: Måtte ha alternaitve False i sortering, Ryddet litt i e-post, som nå iverksettes&#xA;2211272205: Skal ikke ha noe å si, men satt Ja på e-post i config::: For: Nå skal dette styres av asset i Orchestrator.&#xA;2303081333: Midlertidig bruk av prosessen: Til å gå gjennom og sjekke om Arbeidsordre som påstås skal ligge i OeBS FAKTISK ligger i OeBS&#xA;2303091047: MIdlertidig bruk av prosessen: Fordi det feiler om og om igjen (så jeg ikke får excelfil), skrives nå ti og ti linjer til excel i stedet. &#xA;2303151108: Midlertidigheten avsluttet. Fant 8500 aktuelle oppdrag. Les mer om dette i nedenfor første CommentOut&#xA;2309012258: Første publish til Cloud.&#xD;&#xA;2309151028: Lagt til en exceptionoppdager mot slutten av loggen. Usikker på om det vil funke.&#xA;" DisplayName="Process" sap:VirtualizedContainerService.HintSize="911,5130" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Tolk Faktura Kundesjekk&#xA;https://stash.adeo.no/scm/rpa/tolkfakturakundesjekk.git&#xA;&#xA; &#xA;Overtatt som utvikler: Bjørn Rønnestad, bruk Teams! ved kontakt&#xA;&#xA; &#xA;-------------------------------------------------------------&#xA;I denne prosessen er det Process som er main workflow. (Starter derfor akkurat her.)&#xA;-------------------------------------------------------------&#xA;&#xA;&#xA;2205271536: Påstartet logging, fortsett her&#xA;2205300036: Rettet opp alle Config-steder til DataTable. &#xA;2206231337: Sluttført å legge inn loggmeldinger, + en sjekk av e-post&#xA;2206231440: Ser ut til at alt rundt Config skal være løst nå..&#xA;2206240936: Slått av visible på Excel Scopes, rettet litt info&#xA;2207041337: Endret en teller&#xA;2207071445: Lagt inn sjekk av at excelfiler er tilgjengelige for prosessen&#xA;2208081046: Config styrer nå om det sendes varsel om feil til formidlere&#xA;2208081239: en sjekk av innhold i DT på AAAAAA (skal fjernes igjen etter sjekk)&#xA;2208081305: Lagt inn en sjekk av innhold i DT også etter filtreringen&#xA;2208211600: Store problemer med å sortere ut fra SistHåndterteForespørsler pga forskjellige datoformater&#xA;2208211645: Satt e-post til formidler = Ja (Config)&#xA;2208211710: Nei, det så rart ut. Setter tilbake til Nei pr. nå. &#xA;2208302124: Endret bane på logs til S&#xA;2211131416: Måtte ha alternaitve False i sortering, Ryddet litt i e-post, som nå iverksettes&#xA;2211272205: Skal ikke ha noe å si, men satt Ja på e-post i config::: For: Nå skal dette styres av asset i Orchestrator.&#xA;2303081333: Midlertidig bruk av prosessen: Til å gå gjennom og sjekke om Arbeidsordre som påstås skal ligge i OeBS FAKTISK ligger i OeBS&#xA;2303091047: MIdlertidig bruk av prosessen: Fordi det feiler om og om igjen (så jeg ikke får excelfil), skrives nå ti og ti linjer til excel i stedet. &#xA;2303151108: Midlertidigheten avsluttet. Fant 8500 aktuelle oppdrag. Les mer om dette i nedenfor første CommentOut&#xA;2309012258: Første publish til Cloud.&#xA;2309151028: Lagt til en exceptionoppdager mot slutten av loggen. Usikker på om det vil funke.&#xA;" DisplayName="Process" sap:VirtualizedContainerService.HintSize="911,5374" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ss:SecureString" Name="exchangePassword" />
       <Variable x:TypeArguments="x:String" Name="exchangeUsername" />
@@ -118,7 +119,7 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:CommentOut sap2010:Annotation.AnnotationText="Midlertidig prosess-snutt. Les om denne ved å gå inn i den første sequencen i denne Comment Out'en" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,123" sap2010:WorkflowViewState.IdRef="CommentOut_3">
         <ui:CommentOut.Body>
-          <Sequence DisplayName="Sekvens" sap:VirtualizedContainerService.HintSize="284,391" sap2010:WorkflowViewState.IdRef="Sequence_34">
+          <Sequence DisplayName="Sekvens" sap:VirtualizedContainerService.HintSize="284,388" sap2010:WorkflowViewState.IdRef="Sequence_34">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -301,7 +302,7 @@
     </Sequence>
     <ui:CommentOut sap2010:Annotation.AnnotationText="Tidligere ble utsending av melding til formidlere styrt fra Config. Dette er nå flyttet til asset i Orchestrator.&#xA;Kutter derfor nå ut denne sekvensen her" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="869,153" sap2010:WorkflowViewState.IdRef="CommentOut_2">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="705,848" sap2010:WorkflowViewState.IdRef="Sequence_28">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="301,200" sap2010:WorkflowViewState.IdRef="Sequence_28">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1036,9 +1037,9 @@
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
     <ui:Comment sap:VirtualizedContainerService.HintSize="869,74" sap2010:WorkflowViewState.IdRef="Comment_2" Text="Her er e-posten som egentlig sendes tolkefaktura@" />
-    <ui:CommentOut sap2010:Annotation.AnnotationText="Dette er kuttet ut" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="869,599" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:CommentOut sap2010:Annotation.AnnotationText="Dette er kuttet ut" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="869,815" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,490" sap2010:WorkflowViewState.IdRef="Sequence_24">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,706" sap2010:WorkflowViewState.IdRef="Sequence_24">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1116,6 +1117,13 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:SendExchangeMail>
+          <ui:SendExchangeMail ApplicationId="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" DirectoryId="{x:Null}" Domain="{x:Null}" EmailAutodiscover="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" TimeoutMS="{x:Null}" User="{x:Null}" sap2010:Annotation.AnnotationText="Sender e-post med beskjed om at prosessen er fullført." AuthenticationMode="UserNameAndPassword" Body="[&quot;Hei!&lt;br&gt;&lt;br&gt;Prosessen er nå fullført uten feil. Alle arbeidsordre som er klar for fakturering er registrert. Hvis det står 'True' her: &quot; + in_VarsleFormidlerOmFeilIForespørsel.ToString+ &quot; er det sendt e-post til formidler med beskjed om å rette opp sine forspørsler som har feil. Står det 'False', er dette ikke gjort. &lt;br&gt;&lt;br&gt;Ha en fin dag :-)&quot;]" DisplayName="Send Exchange Mail Message to tolkefaktura yy" ExchangeVersion="Exchange2007_SP1" sap:VirtualizedContainerService.HintSize="334,176" sap2010:WorkflowViewState.IdRef="SendExchangeMail_2" IsBodyHtml="True" IsDraft="False" SaveCopy="False" Server="https://exchange.adeo.no" Subject="'TolkFakturaKundesjekk' er nå fullført IKKE SENDT TOLKFAKTURA@" To="bjorn.ronnestad@nav.no">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:SendExchangeMail>
         </Sequence>
       </ui:CommentOut.Body>
       <sap:WorkflowViewStateService.ViewState>
@@ -1124,14 +1132,139 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:SendExchangeMail ApplicationId="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" DirectoryId="{x:Null}" Domain="{x:Null}" EmailAutodiscover="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" TimeoutMS="{x:Null}" User="{x:Null}" sap2010:Annotation.AnnotationText="Sender e-post med beskjed om at prosessen er fullført." AuthenticationMode="UserNameAndPassword" Body="[&quot;Hei!&lt;br&gt;&lt;br&gt;Prosessen er nå fullført uten feil. Alle arbeidsordre som er klar for fakturering er registrert. Hvis det står 'True' her: &quot; + in_VarsleFormidlerOmFeilIForespørsel.ToString+ &quot; er det sendt e-post til formidler med beskjed om å rette opp sine forspørsler som har feil. Står det 'False', er dette ikke gjort. &lt;br&gt;&lt;br&gt;Ha en fin dag :-)&quot;]" DisplayName="Send Exchange Mail Message to tolkefaktura yy" ExchangeVersion="Exchange2007_SP1" sap:VirtualizedContainerService.HintSize="869,176" sap2010:WorkflowViewState.IdRef="SendExchangeMail_2" IsBodyHtml="True" IsDraft="False" SaveCopy="False" Server="https://exchange.adeo.no" Subject="'TolkFakturaKundesjekk' er nå fullført IKKE SENDT TOLKFAKTURA@" To="bjorn.ronnestad@nav.no">
+    <ui:LogMessage DisplayName="Log Message Ferdig med Process" sap:VirtualizedContainerService.HintSize="869,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Ferdig med Process&quot;]" />
+    <TryCatch sap2010:Annotation.AnnotationText="Ferdig med Process" DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="869,82" sap2010:WorkflowViewState.IdRef="TryCatch_11">
+      <TryCatch.Variables>
+        <Variable x:TypeArguments="x:String" Name="loggTekst" />
+      </TryCatch.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-    </ui:SendExchangeMail>
-    <ui:LogMessage DisplayName="Log Message E-post sendt." sap:VirtualizedContainerService.HintSize="869,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;E-post sendt.&quot;]" />
+      <TryCatch.Try>
+        <Sequence DisplayName="Sequence logging" sap:VirtualizedContainerService.HintSize="418,504" sap2010:WorkflowViewState.IdRef="Sequence_37">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Sequence Ny LoggLinje " sap:VirtualizedContainerService.HintSize="376,412" sap2010:WorkflowViewState.IdRef="Sequence_36">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap2010:Annotation.AnnotationText="(loggTekst som Variable)" DisplayName="Assign loggfilTekst " sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="Assign_14">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[loggTekst]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">Ferdig med Process</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+            <ui:AppendLine sap2010:Annotation.AnnotationText="Config som in-argument og dictionary&#xA;LogFil som in-argument og string&#xA;LogBane som in-argument og string" DisplayName="Append Line i loggfil" FileName="[logBane + loggfil]" sap:VirtualizedContainerService.HintSize="334,189" sap2010:WorkflowViewState.IdRef="AppendLine_10" Text="[System.DateTime.now.ToString(&quot;HH:mm:ss.fff&quot;) +&quot; &quot;+ loggTekst]" UseDefaultEncoding="False">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:AppendLine>
+          </Sequence>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422,21" sap2010:WorkflowViewState.IdRef="Catch`1_11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <ui:LogMessage DisplayName="Log Message (Catch) Fikk ikke kontakt med loggfil :-/" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Info" Message="[&quot;Fikk ikke kontakt med loggfil :-/&quot;]" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+    <TryCatch sap2010:Annotation.AnnotationText="(Blank linje)" DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="869,82" sap2010:WorkflowViewState.IdRef="TryCatch_12">
+      <TryCatch.Variables>
+        <Variable x:TypeArguments="x:String" Name="loggTekst" />
+      </TryCatch.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch.Try>
+        <Sequence DisplayName="Sequence logging" sap:VirtualizedContainerService.HintSize="418,504" sap2010:WorkflowViewState.IdRef="Sequence_39">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Sequence Ny LoggLinje " sap:VirtualizedContainerService.HintSize="376,412" sap2010:WorkflowViewState.IdRef="Sequence_38">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap2010:Annotation.AnnotationText="(loggTekst som Variable)" DisplayName="Assign loggfilTekst " sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="Assign_15">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[loggTekst]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+            <ui:AppendLine sap2010:Annotation.AnnotationText="Config som in-argument og dictionary&#xA;LogFil som in-argument og string&#xA;LogBane som in-argument og string" DisplayName="Append Line i loggfil" FileName="[logBane + loggfil]" sap:VirtualizedContainerService.HintSize="334,189" sap2010:WorkflowViewState.IdRef="AppendLine_11" Text="[loggTekst]" UseDefaultEncoding="False">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:AppendLine>
+          </Sequence>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422,21" sap2010:WorkflowViewState.IdRef="Catch`1_12">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <ui:LogMessage DisplayName="Log Message (Catch) Fikk ikke kontakt med loggfil :-/" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Info" Message="[&quot;Fikk ikke kontakt med loggfil :-/&quot;]" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Avslutter_loggfil workflow" sap:VirtualizedContainerService.HintSize="869,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Logging\Avslutter_loggfil.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="logBane">[logBane]</InArgument>
