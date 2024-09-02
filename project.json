@@ -1,22 +1,22 @@
 {
   "name": "TolkFakturaKundesjekk",
+  "projectId": "8c51acad-1164-4ac3-9934-0c57409d7a7b",
   "description": "Her kontrollerer vi at forespørselen inneholder de opplysningene vi trenger for å fakturere. Om ikke sender vi en e-post til formidler. Etterpå laster vi opp alle de arbeidsordrene som nå er klar for fakturering.",
   "main": "Process.xaml",
   "dependencies": {
-    "NAV_RPAGenerellLibrary": "[1.2.1]",
-    "NAV_SendMail": "[1.0.1]",
+    "NAV_RPAGenerellLibrary": "[1.5.0]",
     "UiPath.Excel.Activities": "[2.9.3]",
     "UiPath.Java.Activities": "[1.0.6863.33114]",
-    "UiPath.Mail.Activities": "[1.9.3]",
+    "UiPath.Mail.Activities": "[1.23.11]",
     "UiPath.Salesforce.Activities": "[1.5.2]",
-    "UiPath.System.Activities": "[20.10.1]",
-    "UiPath.UIAutomation.Activities": "[20.10.6]"
+    "UiPath.System.Activities": "[21.10.5]",
+    "UiPath.UIAutomation.Activities": "[21.10.6]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "20.10.2.0",
-  "projectVersion": "1.0.64",
+  "projectVersion": "1.0.65",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -24,6 +24,7 @@
     "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
@@ -31,7 +32,8 @@
     "executionType": "Workflow",
     "readyForPiP": false,
     "startsInPiP": false,
-    "mustRestoreAllDependencies": false
+    "mustRestoreAllDependencies": false,
+    "pipType": "ChildSession"
   },
   "designOptions": {
     "projectProfile": "Developement",
@@ -44,7 +46,8 @@
       "ignoredFiles": []
     },
     "fileInfoCollection": [],
-    "modernBehavior": false
+    "modernBehavior": false,
+    "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [

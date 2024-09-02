@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1689,21397</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2774,22794</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>EGEN_BeFormidlerOppdatereFakturaopplysninger_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="40">
@@ -57,46 +57,49 @@
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <scg:List x:TypeArguments="AssemblyReference" Capacity="72">
-      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.Exchange.WebServices</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
-      <AssemblyReference>System.Data</AssemblyReference>
-      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
-      <AssemblyReference>System</AssemblyReference>
-      <AssemblyReference>System.Drawing</AssemblyReference>
-      <AssemblyReference>System.Core</AssemblyReference>
-      <AssemblyReference>System.Xml</AssemblyReference>
-      <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>PresentationCore</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>Microsoft.Exchange.WebServices</AssemblyReference>
-      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Mail</AssemblyReference>
-      <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>System.ServiceModel</AssemblyReference>
-      <AssemblyReference>NAV_SendMail</AssemblyReference>
-      <AssemblyReference>NAV_SendMail_Expressions_37414557</AssemblyReference>
       <AssemblyReference>NAV_RPAGenerellLibrary</AssemblyReference>
       <AssemblyReference>NAV_RPAGenerellLibrary_Expressions_19071876</AssemblyReference>
-      <AssemblyReference>UiPath.Java.Activities</AssemblyReference>
+      <AssemblyReference>NAV_SendMail</AssemblyReference>
+      <AssemblyReference>NAV_SendMail_Expressions_37414557</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Java.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Salesforce.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="BeFormidlerOppdatereFakturaopplysninger" sap:VirtualizedContainerService.HintSize="931,21332" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="BeFormidlerOppdatereFakturaopplysninger" sap:VirtualizedContainerService.HintSize="1195,22729" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtControlledRequests" />
       <Variable x:TypeArguments="x:String" Name="totalRows" />
@@ -120,8 +123,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message Starter" sap:VirtualizedContainerService.HintSize="889,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Starter 'BeFormidlerOppdatereFakturaopplysninger'&quot;]" />
-    <Assign sap2010:Annotation.AnnotationText="Denne lå hardkodet i argumentene, endret dette til å hente fra Config" DisplayName="Assign in_FilplasseringKontrollerteForespørsler" sap:VirtualizedContainerService.HintSize="889,102" sap2010:WorkflowViewState.IdRef="Assign_38">
+    <ui:LogMessage DisplayName="Log Message Starter" sap:VirtualizedContainerService.HintSize="1133,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Starter 'BeFormidlerOppdatereFakturaopplysninger'&quot;]" />
+    <Assign sap2010:Annotation.AnnotationText="Denne lå hardkodet i argumentene, endret dette til å hente fra Config" DisplayName="Assign in_FilplasseringKontrollerteForespørsler" sap:VirtualizedContainerService.HintSize="1133,113" sap2010:WorkflowViewState.IdRef="Assign_38">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[in_FilplasseringKontrollerteForespørsler]</OutArgument>
       </Assign.To>
@@ -134,7 +137,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <TryCatch DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="889,51" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="1133,52" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Variables>
         <Variable x:TypeArguments="x:String" Name="loggTekst" />
       </TryCatch.Variables>
@@ -198,10 +201,10 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:LogMessage DisplayName="Log Message Henter credentials Exchange" sap:VirtualizedContainerService.HintSize="889,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Henter credentials Exchange&quot;]" />
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="TolkFaktura_ExchangeCredentials" DisplayName="Exhange Mail - Get Credential" sap:VirtualizedContainerService.HintSize="889,79" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[exchangePassword]" Username="[exchangeUsername]" />
-    <ui:LogMessage DisplayName="Log Message Henter info fra kontrollerte forespørsler" sap:VirtualizedContainerService.HintSize="889,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Henter info om kontrollerte forespørsler&quot;]" />
-    <TryCatch sap2010:Annotation.AnnotationText="Henter info fra kontrollerte forespørsler" DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="889,93" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <ui:LogMessage DisplayName="Log Message Henter credentials Exchange" sap:VirtualizedContainerService.HintSize="1133,92" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Henter credentials Exchange&quot;]" />
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="TolkFaktura_ExchangeCredentials" DisplayName="Exhange Mail - Get Credential" sap:VirtualizedContainerService.HintSize="1133,80" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[exchangePassword]" Username="[exchangeUsername]" />
+    <ui:LogMessage DisplayName="Log Message Henter info fra kontrollerte forespørsler" sap:VirtualizedContainerService.HintSize="1133,92" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Henter info om kontrollerte forespørsler&quot;]" />
+    <TryCatch sap2010:Annotation.AnnotationText="Henter info fra kontrollerte forespørsler" DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="1133,94" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <TryCatch.Variables>
         <Variable x:TypeArguments="x:String" Name="loggTekst" />
       </TryCatch.Variables>
@@ -266,22 +269,22 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:CommentOut sap2010:Annotation.AnnotationText="Denne er byttet ut fordi den kræsjet pga. mange forskjellige datoformat&#xA;Sequence New (nedenfor) er de nye" DisplayName="Comment Out Gammel versjon" sap:VirtualizedContainerService.HintSize="889,138" sap2010:WorkflowViewState.IdRef="CommentOut_10">
+    <ui:CommentOut sap2010:Annotation.AnnotationText="Denne er byttet ut fordi den kræsjet pga. mange forskjellige datoformat&#xA;Sequence New (nedenfor) er de nye" DisplayName="Comment Out Gammel versjon" sap:VirtualizedContainerService.HintSize="1133,109" sap2010:WorkflowViewState.IdRef="CommentOut_10">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="418,4671" sap2010:WorkflowViewState.IdRef="Sequence_100">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,4623" sap2010:WorkflowViewState.IdRef="Sequence_100">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Sequence   VIKENDE FRONT2" sap:VirtualizedContainerService.HintSize="376,4579" sap2010:WorkflowViewState.IdRef="Sequence_72">
+          <Sequence DisplayName="Sequence   VIKENDE FRONT2" sap:VirtualizedContainerService.HintSize="450,4599" sap2010:WorkflowViewState.IdRef="Sequence_72">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Henter første kolonne, for deretter å finne ut hvor mange rader denne består av. Dette bruker vi for å hente nøyaktig range nedenfor. Erfaringsmessig kræsjer det ikke like ofte som det gjør om du henter hele kolonnen. (Typ A:M kontra A1:M[siste_rad])" DataTable="[dtControlledRequests]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,174" sap2010:WorkflowViewState.IdRef="ReadRange_1" PreserveFormat="True" Range="A:A" SheetName="SFForespørselKontroll" WorkbookPath="[in_FilplasseringKontrollerteForespørsler]">
+            <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Henter første kolonne, for deretter å finne ut hvor mange rader denne består av. Dette bruker vi for å hente nøyaktig range nedenfor. Erfaringsmessig kræsjer det ikke like ofte som det gjør om du henter hele kolonnen. (Typ A:M kontra A1:M[siste_rad])" DataTable="[dtControlledRequests]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="388,175" sap2010:WorkflowViewState.IdRef="ReadRange_1" PreserveFormat="True" Range="A:A" SheetName="SFForespørselKontroll" WorkbookPath="[in_FilplasseringKontrollerteForespørsler]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1183,22 +1186,22 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <Sequence DisplayName="Sequence   New" sap:VirtualizedContainerService.HintSize="889,6523" sap2010:WorkflowViewState.IdRef="Sequence_98">
+    <Sequence DisplayName="Sequence   New" sap:VirtualizedContainerService.HintSize="1133,6889" sap2010:WorkflowViewState.IdRef="Sequence_98">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Henter første kolonne, for deretter å finne ut hvor mange rader denne består av. Dette bruker vi for å hente nøyaktig range nedenfor. Erfaringsmessig kræsjer det ikke like ofte som det gjør om du henter hele kolonnen. (Typ A:M kontra A1:M[siste_rad])&#xA;&#xA;dtControlledRequests" DataTable="[dtControlledRequests]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="608,204" sap2010:WorkflowViewState.IdRef="ReadRange_3" PreserveFormat="True" Range="A:A" SheetName="SFForespørselKontroll" WorkbookPath="[in_FilplasseringKontrollerteForespørsler]">
+      <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Henter første kolonne, for deretter å finne ut hvor mange rader denne består av. Dette bruker vi for å hente nøyaktig range nedenfor. Erfaringsmessig kræsjer det ikke like ofte som det gjør om du henter hele kolonnen. (Typ A:M kontra A1:M[siste_rad])&#xA;&#xA;dtControlledRequests" DataTable="[dtControlledRequests]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="728,205" sap2010:WorkflowViewState.IdRef="ReadRange_3" PreserveFormat="True" Range="A:A" SheetName="SFForespørselKontroll" WorkbookPath="[in_FilplasseringKontrollerteForespørsler]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ReadRange>
-      <ui:LogMessage DisplayName="Log Message Tomme rader fjernes" sap:VirtualizedContainerService.HintSize="608,91" sap2010:WorkflowViewState.IdRef="LogMessage_72" Level="Info" Message="[&quot;Tomme rader fjernes&quot;]" />
-      <ui:FilterDataTable sap2010:Annotation.AnnotationText="Fjerner tomme rader &#xA;dtControlledRequests" DataTable="[dtControlledRequests]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="608,101" sap2010:WorkflowViewState.IdRef="FilterDataTable_7" OutputDataTable="[dtControlledRequests]" SelectColumnsMode="Keep">
+      <ui:LogMessage DisplayName="Log Message Tomme rader fjernes" sap:VirtualizedContainerService.HintSize="728,92" sap2010:WorkflowViewState.IdRef="LogMessage_72" Level="Info" Message="[&quot;Tomme rader fjernes&quot;]" />
+      <ui:FilterDataTable sap2010:Annotation.AnnotationText="Fjerner tomme rader &#xA;dtControlledRequests" DataTable="[dtControlledRequests]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="728,203" sap2010:WorkflowViewState.IdRef="FilterDataTable_7" OutputDataTable="[dtControlledRequests]" SelectColumnsMode="Keep">
         <ui:FilterDataTable.Filters>
           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
             <ui:FilterOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EMPTY">
@@ -1219,7 +1222,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:FilterDataTable>
-      <Assign sap2010:Annotation.AnnotationText="Antall rader igjen i DT" sap:VirtualizedContainerService.HintSize="608,91" sap2010:WorkflowViewState.IdRef="Assign_46">
+      <Assign sap2010:Annotation.AnnotationText="Antall rader igjen i DT" sap:VirtualizedContainerService.HintSize="728,113" sap2010:WorkflowViewState.IdRef="Assign_46">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[totalRows]</OutArgument>
         </Assign.To>
@@ -1232,7 +1235,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </Assign>
-      <TryCatch sap2010:Annotation.AnnotationText="Etter sortering sitter vi igjen med ..." DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="608,93" sap2010:WorkflowViewState.IdRef="TryCatch_26">
+      <TryCatch sap2010:Annotation.AnnotationText="Etter sortering sitter vi igjen med ..." DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="728,94" sap2010:WorkflowViewState.IdRef="TryCatch_26">
         <TryCatch.Variables>
           <Variable x:TypeArguments="x:String" Name="loggTekst" />
         </TryCatch.Variables>
@@ -1297,9 +1300,9 @@
           </Catch>
         </TryCatch.Catches>
       </TryCatch>
-      <ui:LogMessage DisplayName="Log Message Antall rader" sap:VirtualizedContainerService.HintSize="608,91" sap2010:WorkflowViewState.IdRef="LogMessage_75" Level="Info" Message="[&quot;Antall rader = &quot; + totalRows]" />
-      <ui:LogMessage DisplayName="Log Message Radene hentes." sap:VirtualizedContainerService.HintSize="608,91" sap2010:WorkflowViewState.IdRef="LogMessage_77" Level="Info" Message="[&quot;Radene hentes.&quot;]" />
-      <TryCatch sap2010:Annotation.AnnotationText="Henter rader med forespørsler som er kontrollert fra ..(fil)" DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="608,93" sap2010:WorkflowViewState.IdRef="TryCatch_27">
+      <ui:LogMessage DisplayName="Log Message Antall rader" sap:VirtualizedContainerService.HintSize="728,92" sap2010:WorkflowViewState.IdRef="LogMessage_75" Level="Info" Message="[&quot;Antall rader = &quot; + totalRows]" />
+      <ui:LogMessage DisplayName="Log Message Radene hentes." sap:VirtualizedContainerService.HintSize="728,92" sap2010:WorkflowViewState.IdRef="LogMessage_77" Level="Info" Message="[&quot;Radene hentes.&quot;]" />
+      <TryCatch sap2010:Annotation.AnnotationText="Henter rader med forespørsler som er kontrollert fra ..(fil)" DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="728,94" sap2010:WorkflowViewState.IdRef="TryCatch_27">
         <TryCatch.Variables>
           <Variable x:TypeArguments="x:String" Name="loggTekst" />
         </TryCatch.Variables>
@@ -1364,14 +1367,14 @@
           </Catch>
         </TryCatch.Catches>
       </TryCatch>
-      <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Nå henter vi ut alle rader med forespørsler som er kontrollert (vi bruker altså totalRows som vi fant ovenfor)&#xA;dtControlledRequests" DataTable="[dtControlledRequests]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="608,159" sap2010:WorkflowViewState.IdRef="ReadRange_4" Range="[&quot;A1:M&quot; + totalRows]" SheetName="SFForespørselKontroll" WorkbookPath="[in_FilplasseringKontrollerteForespørsler]">
+      <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Nå henter vi ut alle rader med forespørsler som er kontrollert (vi bruker altså totalRows som vi fant ovenfor)&#xA;dtControlledRequests" DataTable="[dtControlledRequests]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="728,160" sap2010:WorkflowViewState.IdRef="ReadRange_4" Range="[&quot;A1:M&quot; + totalRows]" SheetName="SFForespørselKontroll" WorkbookPath="[in_FilplasseringKontrollerteForespørsler]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ReadRange>
-      <Assign sap2010:Annotation.AnnotationText="ReadCell er altså cellen vi skal hente verdien (datoen) i (se neste Read Cell-activity)" DisplayName="Assign last cell A-column" sap:VirtualizedContainerService.HintSize="608,117" sap2010:WorkflowViewState.IdRef="Assign_49">
+      <Assign sap2010:Annotation.AnnotationText="ReadCell er altså cellen vi skal hente verdien (datoen) i (se neste Read Cell-activity)" DisplayName="Assign last cell A-column" sap:VirtualizedContainerService.HintSize="728,124" sap2010:WorkflowViewState.IdRef="Assign_49">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[ReadCell]</OutArgument>
         </Assign.To>
@@ -1384,7 +1387,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </Assign>
-      <TryCatch DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="608,51" sap2010:WorkflowViewState.IdRef="TryCatch_28">
+      <TryCatch DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="728,52" sap2010:WorkflowViewState.IdRef="TryCatch_28">
         <TryCatch.Variables>
           <Variable x:TypeArguments="x:String" Name="loggTekst" />
         </TryCatch.Variables>
@@ -1448,8 +1451,8 @@
           </Catch>
         </TryCatch.Catches>
       </TryCatch>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="608,91" sap2010:WorkflowViewState.IdRef="LogMessage_83" Level="Info" Message="[&quot;Prøver å lese &quot; + ReadCell + &quot; i &quot; + in_FilplasseringKontrollerteForespørsler]" />
-      <ui:ReadCell sap2010:Annotation.AnnotationText="Leser nederste celle i kolonnen &quot;Sist håndtert&quot; (kolonne A)" Cell="[ReadCell]" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="608,129" sap2010:WorkflowViewState.IdRef="ReadCell_2" SheetName="SFForespørselKontroll" WorkbookPath="[in_FilplasseringKontrollerteForespørsler]">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="728,92" sap2010:WorkflowViewState.IdRef="LogMessage_83" Level="Info" Message="[&quot;Prøver å lese &quot; + ReadCell + &quot; i &quot; + in_FilplasseringKontrollerteForespørsler]" />
+      <ui:ReadCell sap2010:Annotation.AnnotationText="Leser nederste celle i kolonnen &quot;Sist håndtert&quot; (kolonne A)" Cell="[ReadCell]" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="728,130" sap2010:WorkflowViewState.IdRef="ReadCell_2" SheetName="SFForespørselKontroll" WorkbookPath="[in_FilplasseringKontrollerteForespørsler]">
         <ui:ReadCell.Result>
           <OutArgument x:TypeArguments="ui:GenericValue">[sisteDato]</OutArgument>
         </ui:ReadCell.Result>
@@ -1459,7 +1462,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ReadCell>
-      <Assign sap2010:Annotation.AnnotationText="Gives last date in format dd.MM.yyyy&#xA;(10 første karakterer utelukker klokkeslett uansett format)" sap:VirtualizedContainerService.HintSize="608,117" sap2010:WorkflowViewState.IdRef="Assign_51">
+      <Assign sap2010:Annotation.AnnotationText="Gives last date in format dd.MM.yyyy&#xA;(10 første karakterer utelukker klokkeslett uansett format)" sap:VirtualizedContainerService.HintSize="728,124" sap2010:WorkflowViewState.IdRef="Assign_51">
         <Assign.To>
           <OutArgument x:TypeArguments="ui:GenericValue">[sisteDato]</OutArgument>
         </Assign.To>
@@ -1472,7 +1475,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </Assign>
-      <TryCatch DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="608,51" sap2010:WorkflowViewState.IdRef="TryCatch_30">
+      <TryCatch DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="728,52" sap2010:WorkflowViewState.IdRef="TryCatch_30">
         <TryCatch.Variables>
           <Variable x:TypeArguments="x:String" Name="loggTekst" />
         </TryCatch.Variables>
@@ -1536,9 +1539,9 @@
           </Catch>
         </TryCatch.Catches>
       </TryCatch>
-      <ui:LogMessage DisplayName="Log Message LEFT" sap:VirtualizedContainerService.HintSize="608,91" sap2010:WorkflowViewState.IdRef="LogMessage_88" Level="Info" Message="[LEFT(dtControlledRequests.Rows(Convert.ToInt32(totalRows)-2)(0).ToString,10)]" />
-      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="608,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[LEFT(dtControlledRequests.Rows(Convert.ToInt32(totalRows)-2)(0).ToString,10)]" />
-      <TryCatch DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="608,51" sap2010:WorkflowViewState.IdRef="TryCatch_29">
+      <ui:LogMessage DisplayName="Log Message LEFT" sap:VirtualizedContainerService.HintSize="728,92" sap2010:WorkflowViewState.IdRef="LogMessage_88" Level="Info" Message="[LEFT(dtControlledRequests.Rows(Convert.ToInt32(totalRows)-2)(0).ToString,10)]" />
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="728,62" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[LEFT(dtControlledRequests.Rows(Convert.ToInt32(totalRows)-2)(0).ToString,10)]" />
+      <TryCatch DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="728,52" sap2010:WorkflowViewState.IdRef="TryCatch_29">
         <TryCatch.Variables>
           <Variable x:TypeArguments="x:String" Name="loggTekst" />
         </TryCatch.Variables>
@@ -1602,15 +1605,15 @@
           </Catch>
         </TryCatch.Catches>
       </TryCatch>
-      <ui:CommentOut sap2010:Annotation.AnnotationText="Denne feiler, Trenger vi den?&#xA;Hvorfor kan vi ikke bruke resultatet fra &#xA;sisteDato&#xA;?&#xA;&#xA;Jeg legger inn resultatet i en NY ASSIGN nedenfor" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="608,183" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+      <ui:CommentOut sap2010:Annotation.AnnotationText="Denne feiler, Trenger vi den?&#xA;Hvorfor kan vi ikke bruke resultatet fra &#xA;sisteDato&#xA;?&#xA;&#xA;Jeg legger inn resultatet i en NY ASSIGN nedenfor" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="728,184" sap2010:WorkflowViewState.IdRef="CommentOut_9">
         <ui:CommentOut.Body>
-          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_83">
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,223" sap2010:WorkflowViewState.IdRef="Sequence_83">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap2010:Annotation.AnnotationText="Her henter vi ut sist dato for når det ble kjørt en gjennomgang.&#xA;&#xA;Dette gjør vi ved at vi henter datoen for verdien i siste rad. Vi antar at denne inneholder dato for når gjennomgangen sist ble gjort." sap:VirtualizedContainerService.HintSize="262,177" sap2010:WorkflowViewState.IdRef="Assign_54">
+            <Assign sap2010:Annotation.AnnotationText="Her henter vi ut sist dato for når det ble kjørt en gjennomgang.&#xA;&#xA;Dette gjør vi ved at vi henter datoen for verdien i siste rad. Vi antar at denne inneholder dato for når gjennomgangen sist ble gjort." sap:VirtualizedContainerService.HintSize="434,154" sap2010:WorkflowViewState.IdRef="Assign_54">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[lastReviewDate]</OutArgument>
               </Assign.To>
@@ -1633,7 +1636,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:CommentOut>
-      <Assign sap2010:Annotation.AnnotationText="Les det som er Comment Out ovenfor" DisplayName="NY ASSIGN" sap:VirtualizedContainerService.HintSize="608,91" sap2010:WorkflowViewState.IdRef="Assign_55">
+      <Assign sap2010:Annotation.AnnotationText="Les det som er Comment Out ovenfor" DisplayName="NY ASSIGN" sap:VirtualizedContainerService.HintSize="728,113" sap2010:WorkflowViewState.IdRef="Assign_55">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[lastReviewDate]</OutArgument>
         </Assign.To>
@@ -1646,7 +1649,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </Assign>
-      <Assign sap2010:Annotation.AnnotationText="Gives last date in format dd.MM.yyyy" DisplayName="Assign last reviewed date (bottom line)" sap:VirtualizedContainerService.HintSize="608,91" sap2010:WorkflowViewState.IdRef="Assign_67">
+      <Assign sap2010:Annotation.AnnotationText="Gives last date in format dd.MM.yyyy" DisplayName="Assign last reviewed date (bottom line)" sap:VirtualizedContainerService.HintSize="728,113" sap2010:WorkflowViewState.IdRef="Assign_67">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[lastReviewedDate]</OutArgument>
         </Assign.To>
@@ -1659,9 +1662,9 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </Assign>
-      <TryCatch DisplayName="Try Catch1" sap:VirtualizedContainerService.HintSize="608,318" sap2010:WorkflowViewState.IdRef="TryCatch_31">
+      <TryCatch DisplayName="Try Catch1" sap:VirtualizedContainerService.HintSize="728,341" sap2010:WorkflowViewState.IdRef="TryCatch_31">
         <TryCatch.Try>
-          <Assign sap2010:Annotation.AnnotationText="Gives last date in format dd.MM.yyyy" DisplayName="Assign last reviewed date (bottom line)" sap:VirtualizedContainerService.HintSize="262,91" sap2010:WorkflowViewState.IdRef="Assign_56">
+          <Assign sap2010:Annotation.AnnotationText="Gives last date in format dd.MM.yyyy" DisplayName="Assign last reviewed date (bottom line)" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Assign_56">
             <Assign.To>
               <OutArgument x:TypeArguments="s:DateTime">[lastReviewedDateDt]</OutArgument>
             </Assign.To>
@@ -1676,7 +1679,7 @@
           </Assign>
         </TryCatch.Try>
         <TryCatch.Catches>
-          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_31">
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="438,21" sap2010:WorkflowViewState.IdRef="Catch`1_31">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1687,7 +1690,7 @@
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
               </ActivityAction.Argument>
-              <Assign sap2010:Annotation.AnnotationText="Gives last date in format dd.MM.yyyy" DisplayName="Assign last reviewed date (bottom line)" sap:VirtualizedContainerService.HintSize="262,91" sap2010:WorkflowViewState.IdRef="Assign_57">
+              <Assign sap2010:Annotation.AnnotationText="Gives last date in format dd.MM.yyyy" DisplayName="Assign last reviewed date (bottom line)" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="Assign_57">
                 <Assign.To>
                   <OutArgument x:TypeArguments="s:DateTime">[lastReviewedDateDt]</OutArgument>
                 </Assign.To>
@@ -1704,8 +1707,8 @@
           </Catch>
         </TryCatch.Catches>
       </TryCatch>
-      <ui:LogMessage DisplayName="Log Message Sist dato det ble kjørt gjennomgang" sap:VirtualizedContainerService.HintSize="608,91" sap2010:WorkflowViewState.IdRef="LogMessage_98" Level="Info" Message="[&quot;Sist dato det ble kjørt gjennomgang = &quot; + lastReviewedDate]" />
-      <TryCatch sap2010:Annotation.AnnotationText="Sist dato det ble kjørt gjennomgang =" DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="608,93" sap2010:WorkflowViewState.IdRef="TryCatch_32">
+      <ui:LogMessage DisplayName="Log Message Sist dato det ble kjørt gjennomgang" sap:VirtualizedContainerService.HintSize="728,92" sap2010:WorkflowViewState.IdRef="LogMessage_98" Level="Info" Message="[&quot;Sist dato det ble kjørt gjennomgang = &quot; + lastReviewedDate]" />
+      <TryCatch sap2010:Annotation.AnnotationText="Sist dato det ble kjørt gjennomgang =" DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="728,94" sap2010:WorkflowViewState.IdRef="TryCatch_32">
         <TryCatch.Variables>
           <Variable x:TypeArguments="x:String" Name="loggTekst" />
         </TryCatch.Variables>
@@ -1770,7 +1773,7 @@
           </Catch>
         </TryCatch.Catches>
       </TryCatch>
-      <Assign sap:VirtualizedContainerService.HintSize="608,60" sap2010:WorkflowViewState.IdRef="Assign_59">
+      <Assign sap:VirtualizedContainerService.HintSize="728,82" sap2010:WorkflowViewState.IdRef="Assign_59">
         <Assign.To>
           <OutArgument x:TypeArguments="x:Int32">[CounterRows]</OutArgument>
         </Assign.To>
@@ -1778,20 +1781,20 @@
           <InArgument x:TypeArguments="x:Int32">1</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:Comment sap:VirtualizedContainerService.HintSize="608,55" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Control" />
-      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dtControlledRequests]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="608,1678" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+      <ui:Comment sap:VirtualizedContainerService.HintSize="728,56" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Control" />
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtControlledRequests]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="728,1723" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Currentrow" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Sequence Fanger opp dato uansett skrivemåte" sap:VirtualizedContainerService.HintSize="558,1530" sap2010:WorkflowViewState.IdRef="Sequence_103">
+            <Sequence DisplayName="Sequence Fanger opp dato uansett skrivemåte" sap:VirtualizedContainerService.HintSize="694,1601" sap2010:WorkflowViewState.IdRef="Sequence_103">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign sap2010:Annotation.AnnotationText="Last reviewed" sap:VirtualizedContainerService.HintSize="516,91" sap2010:WorkflowViewState.IdRef="Assign_68">
+              <Assign sap2010:Annotation.AnnotationText="Last reviewed" sap:VirtualizedContainerService.HintSize="632,113" sap2010:WorkflowViewState.IdRef="Assign_68">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Object">[CurrentRow("Sist håndtert")]</OutArgument>
                 </Assign.To>
@@ -1804,7 +1807,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </Assign>
-              <TryCatch DisplayName="Try Catch2" sap:VirtualizedContainerService.HintSize="516,379" sap2010:WorkflowViewState.IdRef="TryCatch_38">
+              <TryCatch DisplayName="Try Catch2" sap:VirtualizedContainerService.HintSize="632,421" sap2010:WorkflowViewState.IdRef="TryCatch_38">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1812,13 +1815,13 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <TryCatch.Try>
-                  <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_101">
+                  <Sequence sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_101">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_69">
+                    <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_69">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Object">[CurrentRow("Sist håndtert")]</OutArgument>
                       </Assign.To>
@@ -1829,7 +1832,7 @@
                   </Sequence>
                 </TryCatch.Try>
                 <TryCatch.Catches>
-                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_38">
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="500,21" sap2010:WorkflowViewState.IdRef="Catch`1_38">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1840,20 +1843,20 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                       </ActivityAction.Argument>
-                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[&quot;Exception on Try Catch2: &quot; + exception.message]" />
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,62" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[&quot;Exception on Try Catch2: &quot; + exception.message]" />
                     </ActivityAction>
                   </Catch>
                 </TryCatch.Catches>
               </TryCatch>
-              <ui:CommentOut sap2010:Annotation.AnnotationText="Er denne lik som catch2?" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="516,888" sap2010:WorkflowViewState.IdRef="CommentOut_14">
+              <ui:CommentOut sap2010:Annotation.AnnotationText="Er denne lik som catch2?" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="632,876" sap2010:WorkflowViewState.IdRef="CommentOut_14">
                 <ui:CommentOut.Body>
-                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="480,779" sap2010:WorkflowViewState.IdRef="Sequence_153">
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="596,766" sap2010:WorkflowViewState.IdRef="Sequence_153">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <TryCatch DisplayName="Try Catch3" sap:VirtualizedContainerService.HintSize="438,687" sap2010:WorkflowViewState.IdRef="TryCatch_39">
+                    <TryCatch DisplayName="Try Catch3" sap:VirtualizedContainerService.HintSize="534,655" sap2010:WorkflowViewState.IdRef="TryCatch_39">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1861,14 +1864,14 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <TryCatch.Try>
-                        <Sequence sap:VirtualizedContainerService.HintSize="304,460" sap2010:WorkflowViewState.IdRef="Sequence_102">
+                        <Sequence sap:VirtualizedContainerService.HintSize="496,427" sap2010:WorkflowViewState.IdRef="Sequence_102">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[CurrentRow(&quot;Sist håndtert&quot;).ToString]" />
-                          <Assign sap2010:Annotation.AnnotationText="DateTime.ParseExact(CurrentRow(&quot;Sist håndtert&quot;).ToString, &quot;dd.MM.yyyy HH:mm:ss&quot;, nothing).ToString(&quot;MM/dd/yyyy HH:mm:ss&quot;)&#xA;&#xA;--&#xA;&#xA;DateTime.ParseExact(yourdatevariable.toString(), “dd.MM.yyyy HH:mm:ss”, Globalization.CultureInfo.InvariantCulture)&#xA;.ToString(“MM/dd/yyyy HH:mm:ss”)" sap:VirtualizedContainerService.HintSize="262,267" sap2010:WorkflowViewState.IdRef="Assign_70">
+                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,62" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[CurrentRow(&quot;Sist håndtert&quot;).ToString]" />
+                          <Assign sap2010:Annotation.AnnotationText="DateTime.ParseExact(CurrentRow(&quot;Sist håndtert&quot;).ToString, &quot;dd.MM.yyyy HH:mm:ss&quot;, nothing).ToString(&quot;MM/dd/yyyy HH:mm:ss&quot;)&#xA;&#xA;--&#xA;&#xA;DateTime.ParseExact(yourdatevariable.toString(), “dd.MM.yyyy HH:mm:ss”, Globalization.CultureInfo.InvariantCulture)&#xA;.ToString(“MM/dd/yyyy HH:mm:ss”)" sap:VirtualizedContainerService.HintSize="434,214" sap2010:WorkflowViewState.IdRef="Assign_70">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:Object">[CurrentRow("Sist håndtert")]</OutArgument>
                             </Assign.To>
@@ -1884,7 +1887,7 @@
                         </Sequence>
                       </TryCatch.Try>
                       <TryCatch.Catches>
-                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_39">
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="500,21" sap2010:WorkflowViewState.IdRef="Catch`1_39">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1895,7 +1898,7 @@
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                             </ActivityAction.Argument>
-                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="Feilet i TryCatch3" />
+                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,62" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="Feilet i TryCatch3" />
                           </ActivityAction>
                         </Catch>
                       </TryCatch.Catches>
@@ -1912,15 +1915,15 @@
           </ActivityAction>
         </ui:ForEachRow.Body>
       </ui:ForEachRow>
-      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="608,713" sap2010:WorkflowViewState.IdRef="TryCatch_43">
+      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="728,768" sap2010:WorkflowViewState.IdRef="TryCatch_43">
         <TryCatch.Try>
-          <Sequence sap:VirtualizedContainerService.HintSize="304,486" sap2010:WorkflowViewState.IdRef="Sequence_112">
+          <Sequence sap:VirtualizedContainerService.HintSize="496,540" sap2010:WorkflowViewState.IdRef="Sequence_112">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap2010:Annotation.AnnotationText="filter dtControlledRequests where last modified date &gt; last reviewed date" DisplayName="Assign 123" sap:VirtualizedContainerService.HintSize="262,102" sap2010:WorkflowViewState.IdRef="Assign_60">
+            <Assign sap2010:Annotation.AnnotationText="filter dtControlledRequests where last modified date &gt; last reviewed date" DisplayName="Assign 123" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Assign_60">
               <Assign.To>
                 <OutArgument x:TypeArguments="sd:DataTable">[dtControlledRequests]</OutArgument>
               </Assign.To>
@@ -1933,7 +1936,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <Assign DisplayName="Assign Antalllllll_rader_i_DT" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_71">
+            <Assign DisplayName="Assign Antalllllll_rader_i_DT" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_71">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[Antalllllll_rader_i_DT]</OutArgument>
               </Assign.To>
@@ -1941,8 +1944,8 @@
                 <InArgument x:TypeArguments="x:Int32">[dtControlledRequests.Rows.Count]</InArgument>
               </Assign.Value>
             </Assign>
-            <WriteLine DisplayName="Write Line antall rader med lastReviewedDate" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;Antall rader med &quot; + lastReviewedDate + &quot; er &quot; + Antalllllll_rader_i_DT.ToString]" />
-            <TryCatch DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="TryCatch_37">
+            <WriteLine DisplayName="Write Line antall rader med lastReviewedDate" sap:VirtualizedContainerService.HintSize="434,62" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;Antall rader med &quot; + lastReviewedDate + &quot; er &quot; + Antalllllll_rader_i_DT.ToString]" />
+            <TryCatch DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="TryCatch_37">
               <TryCatch.Variables>
                 <Variable x:TypeArguments="x:String" Name="loggTekst" />
               </TryCatch.Variables>
@@ -2009,7 +2012,7 @@
           </Sequence>
         </TryCatch.Try>
         <TryCatch.Catches>
-          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_44">
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="500,21" sap2010:WorkflowViewState.IdRef="Catch`1_44">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2020,7 +2023,7 @@
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
               </ActivityAction.Argument>
-              <TryCatch sap2010:Annotation.AnnotationText="Feilet i TryCatch: Fikk ikke sjekket hvor mange rader som ligger igjen etter utsortering av dem som ikke har 'lastReviewDate. Antakelig var det null igjen i DT-en." DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="456,153" sap2010:WorkflowViewState.IdRef="TryCatch_44">
+              <TryCatch sap2010:Annotation.AnnotationText="Feilet i TryCatch: Fikk ikke sjekket hvor mange rader som ligger igjen etter utsortering av dem som ikke har 'lastReviewDate. Antakelig var det null igjen i DT-en." DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="456,154" sap2010:WorkflowViewState.IdRef="TryCatch_44">
                 <TryCatch.Variables>
                   <Variable x:TypeArguments="x:String" Name="loggTekst" />
                 </TryCatch.Variables>
@@ -2089,17 +2092,17 @@
           </Catch>
         </TryCatch.Catches>
       </TryCatch>
-      <ui:Comment sap:VirtualizedContainerService.HintSize="608,74" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// De som skal sees videre på (før utsortering False) ligger nå i dtControlledRequests" />
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="608,51" sap2010:WorkflowViewState.IdRef="CommentOut_11">
+      <ui:Comment sap:VirtualizedContainerService.HintSize="728,75" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// De som skal sees videre på (før utsortering False) ligger nå i dtControlledRequests" />
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="728,52" sap2010:WorkflowViewState.IdRef="CommentOut_11">
         <ui:CommentOut.Body>
-          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,600" sap2010:WorkflowViewState.IdRef="Sequence_105">
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,635" sap2010:WorkflowViewState.IdRef="Sequence_105">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message Sorterer ut aktuelle rader." sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_101" Level="Info" Message="[&quot;Sorterer ut aktuelle rader&quot;]" />
-            <ui:FilterDataTable sap2010:Annotation.AnnotationText="Fjerner alle rader som ikke har 'lastReviewDate' som dato i A:A&#xA;&#xA;Behold de rader i &quot;Sist håndtert&quot; som &#xA;er større eller lik LastReviewDate" DataTable="[dtControlledRequests]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="334,146" sap2010:WorkflowViewState.IdRef="FilterDataTable_8" OutputDataTable="[dtControlledRequests]" SelectColumnsMode="Keep">
+            <ui:LogMessage DisplayName="Log Message Sorterer ut aktuelle rader." sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_101" Level="Info" Message="[&quot;Sorterer ut aktuelle rader&quot;]" />
+            <ui:FilterDataTable sap2010:Annotation.AnnotationText="Fjerner alle rader som ikke har 'lastReviewDate' som dato i A:A&#xA;&#xA;Behold de rader i &quot;Sist håndtert&quot; som &#xA;er større eller lik LastReviewDate" DataTable="[dtControlledRequests]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="434,248" sap2010:WorkflowViewState.IdRef="FilterDataTable_8" OutputDataTable="[dtControlledRequests]" SelectColumnsMode="Keep">
               <ui:FilterDataTable.Filters>
                 <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                   <ui:FilterOperationArgument BooleanOperator="And" Operator="GTE">
@@ -2123,7 +2126,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:FilterDataTable>
-            <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_65">
+            <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_65">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[totalRows]</OutArgument>
               </Assign.To>
@@ -2131,7 +2134,7 @@
                 <InArgument x:TypeArguments="x:String">[(1 + dtControlledRequests.Rows.Count).ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:LogMessage DisplayName="Log Message Antall rader nå" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_109" Level="Info" Message="[&quot;Antall rader nå = &quot; + totalRows]" />
+            <ui:LogMessage DisplayName="Log Message Antall rader nå" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_109" Level="Info" Message="[&quot;Antall rader nå = &quot; + totalRows]" />
           </Sequence>
         </ui:CommentOut.Body>
         <sap:WorkflowViewStateService.ViewState>
@@ -2142,7 +2145,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:CommentOut>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Bare et skille" DisplayName="Bare et skille" sap:VirtualizedContainerService.HintSize="889,97" sap2010:WorkflowViewState.IdRef="Sequence_99">
+    <Sequence sap2010:Annotation.AnnotationText="Bare et skille" DisplayName="Bare et skille" sap:VirtualizedContainerService.HintSize="1133,112" sap2010:WorkflowViewState.IdRef="Sequence_99">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2151,8 +2154,8 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message Sorterer i aktuelle rader igjen" sap:VirtualizedContainerService.HintSize="889,91" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info" Message="[&quot;Sorterer i aktuelle rader igjen&quot;]" />
-    <ui:FilterDataTable sap2010:Annotation.AnnotationText="Her sorterer vi, og sitter kun igjen med de  som fortsatt ikke er godkjent. Altså de som er &quot;false&quot; i kolonne 6&#xA;dtControlledRequests&#xA;&#xA;&#xA;131122:&#xA;Endret til kolonneoversktift &quot;Kan faktureres&quot; og lagt til &#xA;to linjer til i utvalget&#xA;.&#xA;.&#xA;.&#xA;&#xA;&#xA;&#xA;&#xA;" DataTable="[dtControlledRequests]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="889,311" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dtControlledRequests]" SelectColumnsMode="Keep">
+    <ui:LogMessage DisplayName="Log Message Sorterer i aktuelle rader igjen" sap:VirtualizedContainerService.HintSize="1133,92" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info" Message="[&quot;Sorterer i aktuelle rader igjen&quot;]" />
+    <ui:FilterDataTable sap2010:Annotation.AnnotationText="Her sorterer vi, og sitter kun igjen med de  som fortsatt ikke er godkjent. Altså de som er &quot;false&quot; i kolonne 6&#xA;dtControlledRequests&#xA;&#xA;&#xA;131122:&#xA;Endret til kolonneoversktift &quot;Kan faktureres&quot; og lagt til &#xA;to linjer til i utvalget&#xA;.&#xA;.&#xA;.&#xA;&#xA;&#xA;&#xA;&#xA;" DataTable="[dtControlledRequests]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="1133,413" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dtControlledRequests]" SelectColumnsMode="Keep">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -2192,14 +2195,14 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:FilterDataTable>
-    <Sequence sap2010:Annotation.AnnotationText="Hvor mange i dtControlledRequest nå?" DisplayName="Hvor mange i dtControlledRequest nå?" sap:VirtualizedContainerService.HintSize="889,274" sap2010:WorkflowViewState.IdRef="Sequence_132">
+    <Sequence sap2010:Annotation.AnnotationText="Hvor mange i dtControlledRequest nå?" DisplayName="Hvor mange i dtControlledRequest nå?" sap:VirtualizedContainerService.HintSize="1133,316" sap2010:WorkflowViewState.IdRef="Sequence_132">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_81">
+      <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_81">
         <Assign.To>
           <OutArgument x:TypeArguments="x:Int32">[hvormangenu]</OutArgument>
         </Assign.To>
@@ -2207,7 +2210,7 @@
           <InArgument x:TypeArguments="x:Int32">[dtControlledRequests.Rows.Count]</InArgument>
         </Assign.Value>
       </Assign>
-      <TryCatch DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="TryCatch_53">
+      <TryCatch DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="TryCatch_53">
         <TryCatch.Variables>
           <Variable x:TypeArguments="x:String" Name="loggTekst" />
         </TryCatch.Variables>
@@ -2272,7 +2275,7 @@
         </TryCatch.Catches>
       </TryCatch>
     </Sequence>
-    <Assign sap:VirtualizedContainerService.HintSize="889,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+    <Assign sap:VirtualizedContainerService.HintSize="1133,82" sap2010:WorkflowViewState.IdRef="Assign_6">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[totalRows]</OutArgument>
       </Assign.To>
@@ -2280,8 +2283,8 @@
         <InArgument x:TypeArguments="x:String">[(1 + dtControlledRequests.Rows.Count).ToString]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:LogMessage DisplayName="Log Message Antall rader som ikke er godkjent" sap:VirtualizedContainerService.HintSize="889,91" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Info" Message="[&quot;Antall rader som ikke er godkjent = &quot; + totalRows]" />
-    <TryCatch DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="889,51" sap2010:WorkflowViewState.IdRef="TryCatch_10">
+    <ui:LogMessage DisplayName="Log Message Antall rader som ikke er godkjent" sap:VirtualizedContainerService.HintSize="1133,92" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Info" Message="[&quot;Antall rader som ikke er godkjent = &quot; + totalRows]" />
+    <TryCatch DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="1133,52" sap2010:WorkflowViewState.IdRef="TryCatch_10">
       <TryCatch.Variables>
         <Variable x:TypeArguments="x:String" Name="loggTekst" />
       </TryCatch.Variables>
@@ -2345,8 +2348,8 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:LogMessage DisplayName="Log Message Tabell med epostadresser bygges" sap:VirtualizedContainerService.HintSize="889,91" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="Info" Message="[&quot;Tabell med epostadresser bygges&quot;]" />
-    <ui:FilterDataTable sap2010:Annotation.AnnotationText="Her lager vi en tabell som inneholder e-postadressene til alle formidlerne.&#xA;&#xA;dtControlledRequests -&gt; dtFormidlere" DataTable="[dtControlledRequests]" DisplayName="Filter Data Table" sap:VirtualizedContainerService.HintSize="889,131" sap2010:WorkflowViewState.IdRef="FilterDataTable_4" OutputDataTable="[dtFormidlere]" SelectColumnsMode="Keep">
+    <ui:LogMessage DisplayName="Log Message Tabell med epostadresser bygges" sap:VirtualizedContainerService.HintSize="1133,92" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="Info" Message="[&quot;Tabell med epostadresser bygges&quot;]" />
+    <ui:FilterDataTable sap2010:Annotation.AnnotationText="Her lager vi en tabell som inneholder e-postadressene til alle formidlerne.&#xA;&#xA;dtControlledRequests -&gt; dtFormidlere" DataTable="[dtControlledRequests]" DisplayName="Filter Data Table" sap:VirtualizedContainerService.HintSize="1133,233" sap2010:WorkflowViewState.IdRef="FilterDataTable_4" OutputDataTable="[dtFormidlere]" SelectColumnsMode="Keep">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="LT" />
@@ -2363,15 +2366,15 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:FilterDataTable>
-    <ui:LogMessage DisplayName="Log Message Dobbeltoppføringer fjernes" sap:VirtualizedContainerService.HintSize="889,91" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Info" Message="[&quot;Dobbeltoppføringer fjernes&quot;]" />
-    <ui:RemoveDuplicateRows sap2010:Annotation.AnnotationText="Fjerner dobbelføringer, slik at vi sitter igjen med en oppføring per formidler." DataTable="[dtFormidlere]" DisplayName="Remove Duplicate Rows" sap:VirtualizedContainerService.HintSize="889,79" sap2010:WorkflowViewState.IdRef="RemoveDuplicateRows_1" OutputDataTable="[dtFormidlere]">
+    <ui:LogMessage DisplayName="Log Message Dobbeltoppføringer fjernes" sap:VirtualizedContainerService.HintSize="1133,92" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Info" Message="[&quot;Dobbeltoppføringer fjernes&quot;]" />
+    <ui:RemoveDuplicateRows sap2010:Annotation.AnnotationText="Fjerner dobbelføringer, slik at vi sitter igjen med en oppføring per formidler." DataTable="[dtFormidlere]" DisplayName="Remove Duplicate Rows" sap:VirtualizedContainerService.HintSize="1133,122" sap2010:WorkflowViewState.IdRef="RemoveDuplicateRows_1" OutputDataTable="[dtFormidlere]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:RemoveDuplicateRows>
-    <TryCatch DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="889,51" sap2010:WorkflowViewState.IdRef="TryCatch_11">
+    <TryCatch DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="1133,52" sap2010:WorkflowViewState.IdRef="TryCatch_11">
       <TryCatch.Variables>
         <Variable x:TypeArguments="x:String" Name="loggTekst" />
       </TryCatch.Variables>
@@ -2435,7 +2438,7 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <TryCatch DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="889,51" sap2010:WorkflowViewState.IdRef="TryCatch_12">
+    <TryCatch DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="1133,52" sap2010:WorkflowViewState.IdRef="TryCatch_12">
       <TryCatch.Variables>
         <Variable x:TypeArguments="x:String" Name="loggTekst" />
       </TryCatch.Variables>
@@ -2499,17 +2502,18 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <Sequence DisplayName="HTML-kodeTabell" sap:VirtualizedContainerService.HintSize="889,1105" sap2010:WorkflowViewState.IdRef="Sequence_115">
+    <Sequence DisplayName="HTML-kodeTabell" sap:VirtualizedContainerService.HintSize="1133,1372" sap2010:WorkflowViewState.IdRef="Sequence_115">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:Comment sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="Comment_6" Text="Her etableres HTML-kodeTabell" />
-      <ui:LogMessage DisplayName="Log Message Tabell med forklaringer, fargekoder mv. produseres" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="Info" Message="[&quot;Tabell med forklaringer, fargekoder mv. produseres&quot;]" />
-      <ui:BuildDataTable DataTable="[dtAvvikForklaring]" DisplayName="LAg tabell med forklaring til e-post - Build Data Table" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Vekttall&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Virksomhet&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Referanse&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Bestiller&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Vedtak&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Vekttall&gt;1&lt;/Vekttall&gt;&#xA;    &lt;Virksomhet&gt;-&lt;/Virksomhet&gt;&#xA;    &lt;Referanse&gt;Referansen synes å være lang. Dobbeltsjekk at referansen er i henhold til kundens krav.&lt;/Referanse&gt;&#xA;    &lt;Bestiller&gt;-&lt;/Bestiller&gt;&#xA;    &lt;Vedtak&gt;Bruker mangler vedtak. Faktureres med sats for døve.&lt;/Vedtak&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Vekttall&gt;2&lt;/Vekttall&gt;&#xA;    &lt;Virksomhet&gt;-&lt;/Virksomhet&gt;&#xA;    &lt;Referanse&gt;-&lt;/Referanse&gt;&#xA;    &lt;Bestiller&gt;-&lt;/Bestiller&gt;&#xA;    &lt;Vedtak&gt;-&lt;/Vedtak&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Vekttall&gt;3&lt;/Vekttall&gt;&#xA;    &lt;Virksomhet&gt;Virksomhet må oppgis, men mangler.&lt;/Virksomhet&gt;&#xA;    &lt;Referanse&gt;Referanse må oppgis, men mangler.&lt;/Referanse&gt;&#xA;    &lt;Bestiller&gt;Verken 'bestiller', 'bestillers navn', eller 'bestillers e-postadresse' er oppgitt under seksjonen 'Bestiller'.&lt;/Bestiller&gt;&#xA;    &lt;Vedtak&gt;-&lt;/Vedtak&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
-      <nd:DataTabell_Til_HTML sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="DataTabell_Til_HTML_2" in_DataTable="[dtAvvikForklaring]" out_HTMLString="[avvikForklaring]" />
-      <Assign DisplayName="Gi farge til rad 1 - Assign" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+      <ui:Comment sap:VirtualizedContainerService.HintSize="434,56" sap2010:WorkflowViewState.IdRef="Comment_6" Text="Her etableres HTML-kodeTabell" />
+      <ui:LogMessage DisplayName="Log Message Tabell med forklaringer, fargekoder mv. produseres" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="Info" Message="[&quot;Tabell med forklaringer, fargekoder mv. produseres&quot;]" />
+      <ui:BuildDataTable DataTable="[dtAvvikForklaring]" DisplayName="LAg tabell med forklaring til e-post - Build Data Table" sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Vekttall&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Virksomhet&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Referanse&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Bestiller&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Vedtak&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Vekttall&gt;1&lt;/Vekttall&gt;&#xA;    &lt;Virksomhet&gt;-&lt;/Virksomhet&gt;&#xA;    &lt;Referanse&gt;Referansen synes å være lang. Dobbeltsjekk at referansen er i henhold til kundens krav.&lt;/Referanse&gt;&#xA;    &lt;Bestiller&gt;-&lt;/Bestiller&gt;&#xA;    &lt;Vedtak&gt;Bruker mangler vedtak. Faktureres med sats for døve.&lt;/Vedtak&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Vekttall&gt;2&lt;/Vekttall&gt;&#xA;    &lt;Virksomhet&gt;-&lt;/Virksomhet&gt;&#xA;    &lt;Referanse&gt;-&lt;/Referanse&gt;&#xA;    &lt;Bestiller&gt;-&lt;/Bestiller&gt;&#xA;    &lt;Vedtak&gt;-&lt;/Vedtak&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Vekttall&gt;3&lt;/Vekttall&gt;&#xA;    &lt;Virksomhet&gt;Virksomhet må oppgis, men mangler.&lt;/Virksomhet&gt;&#xA;    &lt;Referanse&gt;Referanse må oppgis, men mangler.&lt;/Referanse&gt;&#xA;    &lt;Bestiller&gt;Verken 'bestiller', 'bestillers navn', eller 'bestillers e-postadresse' er oppgitt under seksjonen 'Bestiller'.&lt;/Bestiller&gt;&#xA;    &lt;Vedtak&gt;-&lt;/Vedtak&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
+      <ui:Comment sap:VirtualizedContainerService.HintSize="434,133" sap2010:WorkflowViewState.IdRef="Comment_10" Text="// Nedenfor brukes package NAV_RPAGenerellLibrary som konverterer fra DataTable til HTML-string. &#xD;&#xA;&#xD;&#xA;Fra dtAvvikForklaring til avvikForklaring" />
+      <nd:DataTabell_Til_HTML sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="DataTabell_Til_HTML_2" in_DataTable="[dtAvvikForklaring]" out_HTMLString="[avvikForklaring]" />
+      <Assign DisplayName="Gi farge til rad 1 - Assign" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_11">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[avvikForklaring]</OutArgument>
         </Assign.To>
@@ -2517,7 +2521,7 @@
           <InArgument x:TypeArguments="x:String">[avvikForklaring.Replace("&lt;tr&gt;" + Environment.NewLine + "&lt;td&gt;1&lt;/td&gt;","&lt;tr style=background-color:LemonChiffon&gt;" + Environment.NewLine + "&lt;td&gt;1&lt;/td&gt;")]</InArgument>
         </Assign.Value>
       </Assign>
-      <TryCatch sap2010:Annotation.AnnotationText="avvikforklaring1" DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="334,82" sap2010:WorkflowViewState.IdRef="TryCatch_54">
+      <TryCatch sap2010:Annotation.AnnotationText="avvikforklaring1" DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="TryCatch_54">
         <TryCatch.Variables>
           <Variable x:TypeArguments="x:String" Name="loggTekst" />
         </TryCatch.Variables>
@@ -2582,7 +2586,7 @@
           </Catch>
         </TryCatch.Catches>
       </TryCatch>
-      <Assign DisplayName="Gi farge til rad 2 - Assign" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+      <Assign DisplayName="Gi farge til rad 2 - Assign" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_12">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[avvikForklaring]</OutArgument>
         </Assign.To>
@@ -2590,7 +2594,7 @@
           <InArgument x:TypeArguments="x:String">[avvikForklaring.Replace("&lt;tr&gt;" + Environment.NewLine + "&lt;td&gt;2&lt;/td&gt;","&lt;tr style=background-color:LightBlue&gt;" + Environment.NewLine + "&lt;td&gt;2&lt;/td&gt;")]</InArgument>
         </Assign.Value>
       </Assign>
-      <TryCatch sap2010:Annotation.AnnotationText="avvikforklaring2" DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="334,82" sap2010:WorkflowViewState.IdRef="TryCatch_55">
+      <TryCatch sap2010:Annotation.AnnotationText="avvikforklaring2" DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="TryCatch_55">
         <TryCatch.Variables>
           <Variable x:TypeArguments="x:String" Name="loggTekst" />
         </TryCatch.Variables>
@@ -2655,7 +2659,7 @@
           </Catch>
         </TryCatch.Catches>
       </TryCatch>
-      <Assign DisplayName="Gi farge til rad 3 - Assign" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_13">
+      <Assign DisplayName="Gi farge til rad 3 - Assign" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_13">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[avvikForklaring]</OutArgument>
         </Assign.To>
@@ -2663,7 +2667,7 @@
           <InArgument x:TypeArguments="x:String">[avvikForklaring.Replace("&lt;tr&gt;" + Environment.NewLine + "&lt;td&gt;3&lt;/td&gt;","&lt;tr style=background-color:Pink&gt;" + Environment.NewLine + "&lt;td&gt;3&lt;/td&gt;")]</InArgument>
         </Assign.Value>
       </Assign>
-      <TryCatch sap2010:Annotation.AnnotationText="avvikforklaring3" DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="334,82" sap2010:WorkflowViewState.IdRef="TryCatch_56">
+      <TryCatch sap2010:Annotation.AnnotationText="avvikforklaring3" DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="TryCatch_56">
         <TryCatch.Variables>
           <Variable x:TypeArguments="x:String" Name="loggTekst" />
         </TryCatch.Variables>
@@ -2729,8 +2733,8 @@
         </TryCatch.Catches>
       </TryCatch>
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message Listen gjennomgås" sap:VirtualizedContainerService.HintSize="889,91" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="Info" Message="[&quot;Listen gjennomgås&quot;]" />
-    <Assign sap:VirtualizedContainerService.HintSize="889,60" sap2010:WorkflowViewState.IdRef="Assign_39">
+    <ui:LogMessage DisplayName="Log Message Listen gjennomgås" sap:VirtualizedContainerService.HintSize="1133,92" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="Info" Message="[&quot;Listen gjennomgås&quot;]" />
+    <Assign sap:VirtualizedContainerService.HintSize="1133,82" sap2010:WorkflowViewState.IdRef="Assign_39">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[antallFormidlere]</OutArgument>
       </Assign.To>
@@ -2738,7 +2742,7 @@
         <InArgument x:TypeArguments="x:Int32">[dtFormidlere.Rows.Count]</InArgument>
       </Assign.Value>
     </Assign>
-    <TryCatch sap2010:Annotation.AnnotationText="Iverksetter gjennomgang av liste, antall formidlere er ..." DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="889,93" sap2010:WorkflowViewState.IdRef="TryCatch_13">
+    <TryCatch sap2010:Annotation.AnnotationText="Iverksetter gjennomgang av liste, antall formidlere er ..." DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="1133,94" sap2010:WorkflowViewState.IdRef="TryCatch_13">
       <TryCatch.Variables>
         <Variable x:TypeArguments="x:String" Name="loggTekst" />
       </TryCatch.Variables>
@@ -2803,7 +2807,7 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <TryCatch sap2010:Annotation.AnnotationText="Hvis dt var tom " DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="889,82" sap2010:WorkflowViewState.IdRef="TryCatch_59">
+    <TryCatch sap2010:Annotation.AnnotationText="Hvis dt var tom " DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="1133,83" sap2010:WorkflowViewState.IdRef="TryCatch_59">
       <TryCatch.Variables>
         <Variable x:TypeArguments="x:String" Name="loggTekst" />
       </TryCatch.Variables>
@@ -2868,13 +2872,13 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Nå skal vi sende e-post til formidler. Da tar vi en for each e-postadresse, og henter fram alle rader hvor formidler er oppgitt. Resultatet sender vi til formidler per e-post." DataTable="[dtFormidlere]" DisplayName="For Each Row i dtFormidlere" sap:VirtualizedContainerService.HintSize="889,8585" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Nå skal vi sende e-post til formidler. Da tar vi en for each e-postadresse, og henter fram alle rader hvor formidler er oppgitt. Resultatet sender vi til formidler per e-post." DataTable="[dtFormidlere]" DisplayName="For Each Row i dtFormidlere" sap:VirtualizedContainerService.HintSize="1133,8984" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body i For Each row i dtFormidlere" sap:VirtualizedContainerService.HintSize="839,8395" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Body i For Each row i dtFormidlere" sap:VirtualizedContainerService.HintSize="1099,8831" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="dtCurrentFormidler" />
               <Variable x:TypeArguments="x:String" Name="htmlBodyTable" />
@@ -2887,7 +2891,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch sap2010:Annotation.AnnotationText="Blank linje" DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="797,82" sap2010:WorkflowViewState.IdRef="TryCatch_14">
+            <TryCatch sap2010:Annotation.AnnotationText="Blank linje" DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="1037,83" sap2010:WorkflowViewState.IdRef="TryCatch_14">
               <TryCatch.Variables>
                 <Variable x:TypeArguments="x:String" Name="loggTekst" />
               </TryCatch.Variables>
@@ -2954,7 +2958,7 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <Assign DisplayName="Assign Teller+1" sap:VirtualizedContainerService.HintSize="797,60" sap2010:WorkflowViewState.IdRef="Assign_32">
+            <Assign DisplayName="Assign Teller+1" sap:VirtualizedContainerService.HintSize="1037,82" sap2010:WorkflowViewState.IdRef="Assign_32">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[Teller]</OutArgument>
               </Assign.To>
@@ -2962,7 +2966,7 @@
                 <InArgument x:TypeArguments="x:Int32">[Teller+1]</InArgument>
               </Assign.Value>
             </Assign>
-            <TryCatch sap2010:Annotation.AnnotationText="Filtrerer..." DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="797,82" sap2010:WorkflowViewState.IdRef="TryCatch_57">
+            <TryCatch sap2010:Annotation.AnnotationText="Filtrerer..." DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="1037,83" sap2010:WorkflowViewState.IdRef="TryCatch_57">
               <TryCatch.Variables>
                 <Variable x:TypeArguments="x:String" Name="loggTekst" />
               </TryCatch.Variables>
@@ -3027,7 +3031,7 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <ui:FilterDataTable sap2010:Annotation.AnnotationText="Der kolonne 4 = row(0), &#xA;beholdes kolonnene &#xA;1, 2, 7, 8, 9, 10 og 5&#xA;&#xA;dtControlledRequests -&gt; dtCurrentFormidler" DataTable="[dtControlledRequests]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="797,146" sap2010:WorkflowViewState.IdRef="FilterDataTable_5" OutputDataTable="[dtCurrentFormidler]" SelectColumnsMode="Keep">
+            <ui:FilterDataTable sap2010:Annotation.AnnotationText="Der kolonne 4 = row(0), &#xA;beholdes kolonnene &#xA;1, 2, 7, 8, 9, 10 og 5&#xA;&#xA;dtControlledRequests -&gt; dtCurrentFormidler" DataTable="[dtControlledRequests]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="1037,248" sap2010:WorkflowViewState.IdRef="FilterDataTable_5" OutputDataTable="[dtCurrentFormidler]" SelectColumnsMode="Keep">
               <ui:FilterDataTable.Filters>
                 <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                   <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -3057,7 +3061,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:FilterDataTable>
-            <TryCatch sap2010:Annotation.AnnotationText="Altså: " DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="797,82" sap2010:WorkflowViewState.IdRef="TryCatch_58">
+            <TryCatch sap2010:Annotation.AnnotationText="Altså: " DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="1037,83" sap2010:WorkflowViewState.IdRef="TryCatch_58">
               <TryCatch.Variables>
                 <Variable x:TypeArguments="x:String" Name="loggTekst" />
               </TryCatch.Variables>
@@ -3122,7 +3126,7 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <TryCatch sap2010:Annotation.AnnotationText="Her: " DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="797,82" sap2010:WorkflowViewState.IdRef="TryCatch_61">
+            <TryCatch sap2010:Annotation.AnnotationText="Her: " DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="1037,83" sap2010:WorkflowViewState.IdRef="TryCatch_61">
               <TryCatch.Variables>
                 <Variable x:TypeArguments="x:String" Name="loggTekst" />
               </TryCatch.Variables>
@@ -3187,8 +3191,8 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <ui:LogMessage DisplayName="Log Message Behandler..." sap:VirtualizedContainerService.HintSize="797,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Behandler &quot; + dtCurrentFormidler.Rows.Count.ToString + &quot; avvik for &quot; + row(0).ToString + &quot; (&quot; + antallFormidlere.ToString + &quot;)&quot;]" />
-            <TryCatch DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="797,51" sap2010:WorkflowViewState.IdRef="TryCatch_15">
+            <ui:LogMessage DisplayName="Log Message Behandler..." sap:VirtualizedContainerService.HintSize="1037,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Behandler &quot; + dtCurrentFormidler.Rows.Count.ToString + &quot; avvik for &quot; + row(0).ToString + &quot; (&quot; + antallFormidlere.ToString + &quot;)&quot;]" />
+            <TryCatch DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="1037,52" sap2010:WorkflowViewState.IdRef="TryCatch_15">
               <TryCatch.Variables>
                 <Variable x:TypeArguments="x:String" Name="loggTekst" />
               </TryCatch.Variables>
@@ -3252,16 +3256,16 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <If Condition="[row(0).ToString.Contains(&quot;tolkefaktura@nav.no&quot;)]" sap:VirtualizedContainerService.HintSize="797,532" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[row(0).ToString.Contains(&quot;tolkefaktura@nav.no&quot;)]" sap:VirtualizedContainerService.HintSize="1037,577" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="376,374" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                <Sequence sap:VirtualizedContainerService.HintSize="496,417" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message Formidler ikke funnet (mulig slettet fra Tind)" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Info" Message="[&quot;Formidler ikke funnet (mulig slettet fra Tind)&quot;]" />
-                  <TryCatch DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="TryCatch_16">
+                  <ui:LogMessage DisplayName="Log Message Formidler ikke funnet (mulig slettet fra Tind)" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Info" Message="[&quot;Formidler ikke funnet (mulig slettet fra Tind)&quot;]" />
+                  <TryCatch DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="TryCatch_16">
                     <TryCatch.Variables>
                       <Variable x:TypeArguments="x:String" Name="loggTekst" />
                     </TryCatch.Variables>
@@ -3325,7 +3329,7 @@
                       </Catch>
                     </TryCatch.Catches>
                   </TryCatch>
-                  <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+                  <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_14">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[HvisFormidlerErSlettet]</OutArgument>
                     </Assign.To>
@@ -3336,14 +3340,14 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="376,374" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                <Sequence sap:VirtualizedContainerService.HintSize="496,417" sap2010:WorkflowViewState.IdRef="Sequence_12">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message Formidler slettet" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Info" Message="[&quot;Formidler slettet&quot;]" />
-                  <TryCatch DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="TryCatch_17">
+                  <ui:LogMessage DisplayName="Log Message Formidler slettet" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Info" Message="[&quot;Formidler slettet&quot;]" />
+                  <TryCatch DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="TryCatch_17">
                     <TryCatch.Variables>
                       <Variable x:TypeArguments="x:String" Name="loggTekst" />
                     </TryCatch.Variables>
@@ -3407,7 +3411,7 @@
                       </Catch>
                     </TryCatch.Catches>
                   </TryCatch>
-                  <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_15">
+                  <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_15">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[HvisFormidlerErSlettet]</OutArgument>
                     </Assign.To>
@@ -3420,8 +3424,9 @@
                 </Sequence>
               </If.Else>
             </If>
-            <nd:DataTabell_Til_HTML sap:VirtualizedContainerService.HintSize="797,22" sap2010:WorkflowViewState.IdRef="DataTabell_Til_HTML_3" in_DataTable="[dtCurrentFormidler]" out_HTMLString="[currentFormidler]" />
-            <Assign DisplayName="Fjern null fra tabell - Assign" sap:VirtualizedContainerService.HintSize="797,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+            <ui:Comment sap:VirtualizedContainerService.HintSize="1037,133" sap2010:WorkflowViewState.IdRef="Comment_11" Text="// Nedenfor brukes package NAV_RPAGenerellLibrary som konverterer fra DataTable til HTML-string. &#xA;&#xA;Fra dtCurrentFormidler til currentFormidler" />
+            <nd:DataTabell_Til_HTML sap:VirtualizedContainerService.HintSize="1037,25" sap2010:WorkflowViewState.IdRef="DataTabell_Til_HTML_3" in_DataTable="[dtCurrentFormidler]" out_HTMLString="[currentFormidler]" />
+            <Assign DisplayName="Fjern null fra tabell - Assign" sap:VirtualizedContainerService.HintSize="1037,82" sap2010:WorkflowViewState.IdRef="Assign_7">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[currentFormidler]</OutArgument>
               </Assign.To>
@@ -3429,7 +3434,7 @@
                 <InArgument x:TypeArguments="x:String">[currentFormidler.Replace("&lt;td&gt;0&lt;/td&gt;","&lt;td&gt;&lt;/td&gt;")]</InArgument>
               </Assign.Value>
             </Assign>
-            <Assign DisplayName="Legg farge bak 1 på tabell - Assign" sap:VirtualizedContainerService.HintSize="797,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+            <Assign DisplayName="Legg farge bak 1 på tabell - Assign" sap:VirtualizedContainerService.HintSize="1037,82" sap2010:WorkflowViewState.IdRef="Assign_8">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[currentFormidler]</OutArgument>
               </Assign.To>
@@ -3437,7 +3442,7 @@
                 <InArgument x:TypeArguments="x:String">[currentFormidler.Replace("&lt;td&gt;1&lt;/td&gt;","&lt;td style=background-color:LemonChiffon&gt;1&lt;/td&gt;")]</InArgument>
               </Assign.Value>
             </Assign>
-            <Assign DisplayName="Legg farge bak 2 på tabell - Assign" sap:VirtualizedContainerService.HintSize="797,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+            <Assign DisplayName="Legg farge bak 2 på tabell - Assign" sap:VirtualizedContainerService.HintSize="1037,82" sap2010:WorkflowViewState.IdRef="Assign_9">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[currentFormidler]</OutArgument>
               </Assign.To>
