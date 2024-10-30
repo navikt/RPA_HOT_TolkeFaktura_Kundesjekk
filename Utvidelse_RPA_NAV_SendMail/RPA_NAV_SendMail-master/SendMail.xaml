@@ -33,7 +33,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>745,1449</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2472,1731</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="60">
@@ -68,6 +68,9 @@
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
       <x:String>System.Net</x:String>
+      <x:String>UiPath.Mail.Exchange</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -101,9 +104,16 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Java.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="755,1424" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="983,1666" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ss:SecureString" Name="mailpwd" />
       <Variable x:TypeArguments="x:String" Name="mailUsername" />
@@ -114,15 +124,15 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="713,306" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="921,314" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[MailCredentials]" DisplayName="Get Credential" FolderPath="[OrchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="284,79" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[mailpwd]" Username="[mailUsername]" />
+        <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[MailCredentials]" DisplayName="Get Credential" FolderPath="[OrchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="284,80" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[mailpwd]" Username="[mailUsername]" />
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="440,151" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -130,7 +140,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Boolean">[AssetError]</OutArgument>
               </Assign.To>
@@ -142,7 +152,7 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <If Condition="[AssetError]" DisplayName="If Asset error" sap:VirtualizedContainerService.HintSize="713,509" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[AssetError]" DisplayName="If Asset error" sap:VirtualizedContainerService.HintSize="921,513" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -150,12 +160,12 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,322" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,324" sap2010:WorkflowViewState.IdRef="TryCatch_2">
           <TryCatch.Try>
-            <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[MailCredentials]" DisplayName="Get Credential" FolderPath="/" sap:VirtualizedContainerService.HintSize="284,79" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[mailpwd]" Username="[mailUsername]" />
+            <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[MailCredentials]" DisplayName="Get Credential" FolderPath="/" sap:VirtualizedContainerService.HintSize="284,80" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[mailpwd]" Username="[mailUsername]" />
           </TryCatch.Try>
           <TryCatch.Catches>
-            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,160" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,161" sap2010:WorkflowViewState.IdRef="Catch`1_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -166,21 +176,61 @@
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                 </ActivityAction.Argument>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Finner ikke MailCredential&quot; +vbCrLf + &quot;Vennligst verifiser Credential/FolderPath i Orchestrator&quot;]" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Finner ikke MailCredential&quot; +vbCrLf + &quot;Vennligst verifiser Credential/FolderPath i Orchestrator&quot;]" />
               </ActivityAction>
             </Catch>
           </TryCatch.Catches>
         </TryCatch>
       </If.Then>
     </If>
-    <If Condition="[IsBody_HTML]" DisplayName="If Body HTML" sap:VirtualizedContainerService.HintSize="713,306" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[IsBody_HTML]" DisplayName="If Body HTML" sap:VirtualizedContainerService.HintSize="921,540" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
-        <ui:SendExchangeMail ApplicationId="{x:Null}" DirectoryId="{x:Null}" EmailAutodiscover="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" AuthenticationMode="UserNameAndPassword" Bcc="[MailReceiverBCC]" Body="[MailBody]" Cc="[MailReceiverCopy]" DisplayName="Send Exchange Mail Message" Domain="adeo.no" ExchangeVersion="Exchange2007_SP1" From="[UseAlternativeSender]" sap:VirtualizedContainerService.HintSize="334,148" sap2010:WorkflowViewState.IdRef="SendExchangeMail_1" IsBodyHtml="True" IsDraft="False" Password="[New System.net.NetworkCredential(String.Empty, mailpwd).Password]" SaveCopy="False" Server="https://exchange.adeo.no" Subject="[MailSubject]" To="[MailReceiver]" User="[mailUsername]" />
+        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,380" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+          <TryCatch.Try>
+            <ui:SendExchangeMail ApplicationId="{x:Null}" DirectoryId="{x:Null}" EmailAutodiscover="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" SecurePassword="{x:Null}" AuthenticationMode="UserNameAndPassword" Bcc="[MailReceiverBCC]" Body="[MailBody]" Cc="[MailReceiverCopy]" DisplayName="Send Exchange Mail Message Then--" Domain="adeo.no" ExchangeVersion="Exchange2007_SP1" From="[UseAlternativeSender]" sap:VirtualizedContainerService.HintSize="334,152" sap2010:WorkflowViewState.IdRef="SendExchangeMail_1" IsBodyHtml="True" IsDraft="False" Password="[New System.net.NetworkCredential(String.Empty, mailpwd).Password]" SaveCopy="False" Server="https://exchange.adeo.no" Subject="[MailSubject]" TimeoutMS="4000" To="[MailReceiver]" User="[mailUsername]" />
+          </TryCatch.Try>
+          <TryCatch.Catches>
+            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ActivityAction x:TypeArguments="s:Exception">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                </ActivityAction.Argument>
+                <ui:LogMessage DisplayName="Log Message En e-post feilet i Then under IsBody_HTML" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;En e-post feilet i Then under IsBody_HTML&quot;]" />
+              </ActivityAction>
+            </Catch>
+          </TryCatch.Catches>
+        </TryCatch>
       </If.Then>
       <If.Else>
-        <ui:SendExchangeMail ApplicationId="{x:Null}" DirectoryId="{x:Null}" EmailAutodiscover="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" AuthenticationMode="UserNameAndPassword" Bcc="[MailReceiverBCC]" Body="[MailBody]" Cc="[MailReceiverCopy]" DisplayName="Send Exchange Mail Message" Domain="adeo.no" ExchangeVersion="Exchange2007_SP1" From="[UseAlternativeSender]" sap:VirtualizedContainerService.HintSize="334,148" sap2010:WorkflowViewState.IdRef="SendExchangeMail_2" IsBodyHtml="False" IsDraft="False" Password="[New System.net.NetworkCredential(String.Empty, mailpwd).Password]" SaveCopy="False" Server="https://exchange.adeo.no" Subject="[MailSubject]" To="[MailReceiver]" User="[mailUsername]" />
+        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,380" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+          <TryCatch.Try>
+            <ui:SendExchangeMail ApplicationId="{x:Null}" DirectoryId="{x:Null}" EmailAutodiscover="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" SecurePassword="{x:Null}" AuthenticationMode="UserNameAndPassword" Bcc="[MailReceiverBCC]" Body="[MailBody]" Cc="[MailReceiverCopy]" DisplayName="Send Exchange Mail Message Else--" Domain="adeo.no" ExchangeVersion="Exchange2007_SP1" From="[UseAlternativeSender]" sap:VirtualizedContainerService.HintSize="334,152" sap2010:WorkflowViewState.IdRef="SendExchangeMail_2" IsBodyHtml="False" IsDraft="False" Password="[New System.net.NetworkCredential(String.Empty, mailpwd).Password]" SaveCopy="False" Server="https://exchange.adeo.no" Subject="[MailSubject]" TimeoutMS="4000" To="[MailReceiver]" User="[mailUsername]" />
+          </TryCatch.Try>
+          <TryCatch.Catches>
+            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ActivityAction x:TypeArguments="s:Exception">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                </ActivityAction.Argument>
+                <ui:LogMessage DisplayName="Log Message En e-post feilet i Else under IsBody_HTML" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;En e-post feilet i Else under IsBody_HTML&quot;]" />
+              </ActivityAction>
+            </Catch>
+          </TryCatch.Catches>
+        </TryCatch>
       </If.Else>
     </If>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="713,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;SendMail: ExchangeMail sendt successfully&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="921,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;SendMail: ExchangeMail sendt successfully&quot;]" />
   </Sequence>
 </Activity>
