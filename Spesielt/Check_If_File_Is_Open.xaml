@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2634,2888</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>970.666666666667,3111.33333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Check_If_File_Is_Open_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="30">
@@ -45,40 +45,45 @@
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <scg:List x:TypeArguments="AssemblyReference" Capacity="54">
-      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
-      <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Drawing</AssemblyReference>
-      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>PresentationCore</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.ServiceModel</AssemblyReference>
-      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
-      <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Java.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>UiPath.Java.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Check_If_File_Is_Open" sap:VirtualizedContainerService.HintSize="961,2823" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Check_If_File_Is_Open" sap:VirtualizedContainerService.HintSize="980.666666666667,3046.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="AltLukket" />
       <Variable x:TypeArguments="sd:DataTable" Name="DTfilsjekk1" />
@@ -94,8 +99,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message Sjekker om filene er åpne eller ikke" sap:VirtualizedContainerService.HintSize="919,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Sjekker om filene er åpne eller ikke&quot;]" />
-    <TryCatch DisplayName="LoggEntry (Try Catch) " sap:VirtualizedContainerService.HintSize="919,51" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <ui:LogMessage DisplayName="Log Message Sjekker om filene er åpne eller ikke" sap:VirtualizedContainerService.HintSize="918.666666666667,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Sjekker om filene er åpne eller ikke&quot;]" />
+    <TryCatch DisplayName="LoggEntry (Try Catch) " sap:VirtualizedContainerService.HintSize="918.666666666667,53.3333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <TryCatch.Variables>
         <Variable x:TypeArguments="x:String" Name="loggTekst" />
       </TryCatch.Variables>
@@ -159,7 +164,7 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <Assign DisplayName="Assign AltLukket (initielt)" sap:VirtualizedContainerService.HintSize="919,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign DisplayName="Assign AltLukket (initielt)" sap:VirtualizedContainerService.HintSize="918.666666666667,84.6666666666667" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Boolean">[AltLukket]</OutArgument>
       </Assign.To>
@@ -167,7 +172,7 @@
         <InArgument x:TypeArguments="x:Boolean">True</InArgument>
       </Assign.Value>
     </Assign>
-    <TryCatch DisplayName="Try Catch Sjekker om filer er tilgjengelige" sap:VirtualizedContainerService.HintSize="919,1168" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch Sjekker om filer er tilgjengelige" sap:VirtualizedContainerService.HintSize="918.666666666667,1374" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -175,61 +180,77 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="376,941" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence sap:VirtualizedContainerService.HintSize="416,2848.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ReadRange AddHeaders="False" DataTable="[DTfilsjekk1]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="LukketSjekk" WorkbookPath="[Config.Select(&quot;Name='AvvikFraHovedregler'&quot;)(0)(1).ToString]">
+          <ui:LogMessage DisplayName="Log Message &quot;Sjekker om filer er ledige" sap:VirtualizedContainerService.HintSize="354,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Sjekker om filer er ledige&quot;]" />
+          <ui:ReadRange AddHeaders="False" DataTable="[DTfilsjekk1]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="354,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="LukketSjekk" WorkbookPath="[Config.Select(&quot;Name='AvvikFraHovedregler'&quot;)(0)(1).ToString]">
             <ui:ReadRange.Range>
               <InArgument x:TypeArguments="x:String">
                 <Literal x:TypeArguments="x:String" Value="" />
               </InArgument>
             </ui:ReadRange.Range>
           </ui:ReadRange>
-          <ui:ReadRange AddHeaders="False" DataTable="[DTfilsjekk2]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="LukketSjekk" WorkbookPath="[Config.Select(&quot;Name='Fakturalinjer'&quot;)(0)(1).ToString]">
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;1/7&quot;]" />
+          <ui:ClearDataTable DataTable="[DTfilsjekk1]" DisplayName="Clear Data Table 1" sap:VirtualizedContainerService.HintSize="354,81.3333333333333" sap2010:WorkflowViewState.IdRef="ClearDataTable_1" />
+          <ui:ReadRange AddHeaders="False" DataTable="[DTfilsjekk2]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="354,88" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="LukketSjekk" WorkbookPath="[Config.Select(&quot;Name='Fakturalinjer'&quot;)(0)(1).ToString]">
             <ui:ReadRange.Range>
               <InArgument x:TypeArguments="x:String">
                 <Literal x:TypeArguments="x:String" Value="" />
               </InArgument>
             </ui:ReadRange.Range>
           </ui:ReadRange>
-          <ui:ReadRange AddHeaders="False" DataTable="[DTfilsjekk3]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="LukketSjekk" WorkbookPath="[Config.Select(&quot;Name='Foresporselinfo'&quot;)(0)(1).ToString]">
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;2/7&quot;]" />
+          <ui:ClearDataTable DataTable="[DTfilsjekk2]" DisplayName="Clear Data Table 2" sap:VirtualizedContainerService.HintSize="354,81.3333333333333" sap2010:WorkflowViewState.IdRef="ClearDataTable_2" />
+          <ui:ReadRange AddHeaders="False" DataTable="[DTfilsjekk3]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="354,88" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="LukketSjekk" WorkbookPath="[Config.Select(&quot;Name='Foresporselinfo'&quot;)(0)(1).ToString]">
             <ui:ReadRange.Range>
               <InArgument x:TypeArguments="x:String">
                 <Literal x:TypeArguments="x:String" Value="" />
               </InArgument>
             </ui:ReadRange.Range>
           </ui:ReadRange>
-          <ui:ReadRange AddHeaders="False" DataTable="[DTfilsjekk4]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_4" SheetName="LukketSjekk" WorkbookPath="[Config.Select(&quot;Name='KontrollerteForesporsler'&quot;)(0)(1).ToString]">
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;3/7&quot;]" />
+          <ui:ClearDataTable DataTable="[DTfilsjekk3]" DisplayName="Clear Data Table 3" sap:VirtualizedContainerService.HintSize="354,81.3333333333333" sap2010:WorkflowViewState.IdRef="ClearDataTable_3" />
+          <ui:ReadRange AddHeaders="False" DataTable="[DTfilsjekk4]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="354,88" sap2010:WorkflowViewState.IdRef="ReadRange_4" SheetName="LukketSjekk" WorkbookPath="[Config.Select(&quot;Name='KontrollerteForesporsler'&quot;)(0)(1).ToString]">
             <ui:ReadRange.Range>
               <InArgument x:TypeArguments="x:String">
                 <Literal x:TypeArguments="x:String" Value="" />
               </InArgument>
             </ui:ReadRange.Range>
           </ui:ReadRange>
-          <ui:ReadRange AddHeaders="False" DataTable="[DTfilsjekk5]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_5" SheetName="Sheet0" WorkbookPath="[Config.Select(&quot;Name='Kvitteringer'&quot;)(0)(1).ToString]">
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;4/7&quot;]" />
+          <ui:ClearDataTable DataTable="[DTfilsjekk4]" DisplayName="Clear Data Table 4" sap:VirtualizedContainerService.HintSize="354,81.3333333333333" sap2010:WorkflowViewState.IdRef="ClearDataTable_4" />
+          <ui:ReadRange AddHeaders="False" DataTable="[DTfilsjekk5]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="354,88" sap2010:WorkflowViewState.IdRef="ReadRange_5" SheetName="Sheet0" WorkbookPath="[Config.Select(&quot;Name='Kvitteringer'&quot;)(0)(1).ToString]">
             <ui:ReadRange.Range>
               <InArgument x:TypeArguments="x:String">
                 <Literal x:TypeArguments="x:String" Value="" />
               </InArgument>
             </ui:ReadRange.Range>
           </ui:ReadRange>
-          <ui:ReadRange AddHeaders="False" DataTable="[DTfilsjekk6]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_6" SheetName="LukketSjekk" WorkbookPath="[Config.Select(&quot;Name='Oppdragskvittering-logg'&quot;)(0)(1).ToString]">
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info" Message="[&quot;5/7&quot;]" />
+          <ui:ClearDataTable DataTable="[DTfilsjekk5]" DisplayName="Clear Data Table 5" sap:VirtualizedContainerService.HintSize="354,81.3333333333333" sap2010:WorkflowViewState.IdRef="ClearDataTable_5" />
+          <ui:ReadRange AddHeaders="False" DataTable="[DTfilsjekk6]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="354,88" sap2010:WorkflowViewState.IdRef="ReadRange_6" SheetName="LukketSjekk" WorkbookPath="[Config.Select(&quot;Name='Oppdragskvittering-logg'&quot;)(0)(1).ToString]">
             <ui:ReadRange.Range>
               <InArgument x:TypeArguments="x:String">
                 <Literal x:TypeArguments="x:String" Value="" />
               </InArgument>
             </ui:ReadRange.Range>
           </ui:ReadRange>
-          <ui:ReadRange AddHeaders="False" DataTable="[DTfilsjekk7]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_7" SheetName="LukketSjekk" WorkbookPath="[Config.Select(&quot;Name='Satser'&quot;)(0)(1).ToString]">
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Info" Message="[&quot;6/7&quot;]" />
+          <ui:ClearDataTable DataTable="[DTfilsjekk6]" DisplayName="Clear Data Table 6" sap:VirtualizedContainerService.HintSize="354,81.3333333333333" sap2010:WorkflowViewState.IdRef="ClearDataTable_6" />
+          <ui:ReadRange AddHeaders="False" DataTable="[DTfilsjekk7]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="354,88" sap2010:WorkflowViewState.IdRef="ReadRange_7" SheetName="LukketSjekk" WorkbookPath="[Config.Select(&quot;Name='Satser'&quot;)(0)(1).ToString]">
             <ui:ReadRange.Range>
               <InArgument x:TypeArguments="x:String">
                 <Literal x:TypeArguments="x:String" Value="" />
               </InArgument>
             </ui:ReadRange.Range>
           </ui:ReadRange>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="Info" Message="[&quot;7/7&quot;]" />
+          <ui:ClearDataTable DataTable="[DTfilsjekk7]" DisplayName="Clear Data Table 7" sap:VirtualizedContainerService.HintSize="354,81.3333333333333" sap2010:WorkflowViewState.IdRef="ClearDataTable_7" />
+          <ui:LogMessage DisplayName="Log Message Alt er lukket og klart til bruk" sap:VirtualizedContainerService.HintSize="354,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Info" Message="[&quot;Alt er lukket og klart til bruk&quot;]" />
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
