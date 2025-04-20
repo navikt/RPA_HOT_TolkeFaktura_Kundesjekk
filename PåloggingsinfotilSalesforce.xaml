@@ -1,8 +1,10 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="PåloggingsinfotilSalesforceSequence" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:usa="clr-namespace:UiPath.Salesforce.Activities;assembly=UiPath.Salesforce.Activities" xmlns:usc="clr-namespace:UiPath.Salesforce.ConnectionService;assembly=UiPath.Salesforce" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="out_ExistingSalesforceConnection" Type="InOutArgument(usc:IConnectionService)" />
+    <x:Property Name="logBane" Type="InOutArgument(x:String)" />
+    <x:Property Name="loggfil" Type="InOutArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>590,1686.66666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>752,2141.33333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -85,7 +87,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Påloggingsinfo til Salesforce." DisplayName="Påloggingsinfo til Salesforce - Sequence" sap:VirtualizedContainerService.HintSize="600,1622" sap2010:WorkflowViewState.IdRef="Sequence_7">
+  <Sequence sap2010:Annotation.AnnotationText="Påloggingsinfo til Salesforce." DisplayName="Påloggingsinfo til Salesforce - Sequence" sap:VirtualizedContainerService.HintSize="762,2076.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_7">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="salesForce_Username" />
       <Variable x:TypeArguments="x:String" Name="salesForce_Server" />
@@ -103,8 +105,73 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message Henter Assets fra Orchestrator" sap:VirtualizedContainerService.HintSize="538,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Henter Assets fra Orchestrator&quot;]" />
-    <Assign DisplayName="Assign teller for RetryScope" sap:VirtualizedContainerService.HintSize="538,85.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:LogMessage DisplayName="Log Message Henter Assets fra Orchestrator" sap:VirtualizedContainerService.HintSize="700,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Henter Assets fra Orchestrator&quot;]" />
+    <TryCatch sap2010:Annotation.AnnotationText="Henter assets. Skal nå logge på Salesforce" DisplayName="Ny loggLinje (Try Catch) Henter assets. Skal nå logge på Salesforce" sap:VirtualizedContainerService.HintSize="700,84" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+      <TryCatch.Variables>
+        <Variable x:TypeArguments="x:String" Name="loggTekst" />
+      </TryCatch.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch.Try>
+        <Sequence DisplayName="Sequence logging" sap:VirtualizedContainerService.HintSize="558,560.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_62">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Sequence Ny LoggLinje " sap:VirtualizedContainerService.HintSize="496,453.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_61">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap2010:Annotation.AnnotationText="(loggTekst som Variable)" DisplayName="Assign loggfilTekst " sap:VirtualizedContainerService.HintSize="434,115.333333333333" sap2010:WorkflowViewState.IdRef="Assign_10">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[loggTekst]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">Henter assets. Skal nå logge på Salesforce</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+            <ui:AppendLine sap2010:Annotation.AnnotationText="Config som in-argument og dictionary&#xA;LogFil som in-argument og string&#xA;LogBane som in-argument og string" DisplayName="Append Line i loggfil" FileName="[logBane + loggfil]" sap:VirtualizedContainerService.HintSize="434,195.333333333333" sap2010:WorkflowViewState.IdRef="AppendLine_1" Text="[System.DateTime.now.ToString(&quot;HH:mm:ss.fff&quot;) +&quot; &quot;+ loggTekst]" UseDefaultEncoding="False">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:AppendLine>
+          </Sequence>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="562.666666666667,21.3333333333333" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <ui:LogMessage DisplayName="Log Message (Catch) Fikk ikke kontakt med loggfil :-/" sap:VirtualizedContainerService.HintSize="334,96" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Fikk ikke kontakt med loggfil :-/&quot;]" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+    <Assign DisplayName="Assign teller for RetryScope" sap:VirtualizedContainerService.HintSize="700,84.6666666666667" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[RetryTeller]</OutArgument>
       </Assign.To>
@@ -112,16 +179,16 @@
         <InArgument x:TypeArguments="x:Int32">0</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:RetryScope DisplayName="Retry Scope for pålogging Salesforce" sap:VirtualizedContainerService.HintSize="538,946" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="5" RetryInterval="00:00:10">
+    <ui:RetryScope DisplayName="Retry Scope for pålogging Salesforce" sap:VirtualizedContainerService.HintSize="700,1172.66666666667" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="5" RetryInterval="00:00:10">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
-          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="496,696" sap2010:WorkflowViewState.IdRef="Sequence_54">
+          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="658,923.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_54">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign DisplayName="Assign bolAssetsOK = False" sap:VirtualizedContainerService.HintSize="434,85.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign DisplayName="Assign bolAssetsOK = False" sap:VirtualizedContainerService.HintSize="596,84.6666666666667" sap2010:WorkflowViewState.IdRef="Assign_3">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Boolean">[bolAssetsOK]</OutArgument>
               </Assign.To>
@@ -129,7 +196,7 @@
                 <InArgument x:TypeArguments="x:Boolean">False</InArgument>
               </Assign.Value>
             </Assign>
-            <Assign DisplayName="Assign teller for RetryScope økes med 1" sap:VirtualizedContainerService.HintSize="434,85.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign DisplayName="Assign teller for RetryScope økes med 1" sap:VirtualizedContainerService.HintSize="596,84.6666666666667" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[RetryTeller]</OutArgument>
               </Assign.To>
@@ -137,8 +204,73 @@
                 <InArgument x:TypeArguments="x:Int32">[RetryTeller+1]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:LogMessage DisplayName="Log Message Forsøk nr. ..." sap:VirtualizedContainerService.HintSize="434,96" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Forsøk nr. &quot; + RetryTeller.ToString]" />
-            <TryCatch DisplayName="Try Catch TolkFaktura_SalesForceConsumer" sap:VirtualizedContainerService.HintSize="434,54" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <ui:LogMessage DisplayName="Log Message Forsøk nr. ..." sap:VirtualizedContainerService.HintSize="596,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Forsøk nr. &quot; + RetryTeller.ToString]" />
+            <TryCatch sap2010:Annotation.AnnotationText="&quot;Forsøk nr. &quot; + RetryTeller.ToString" DisplayName="Ny loggLinje (Try Catch) &quot;Forsøk nr. &quot; + RetryTeller.ToString" sap:VirtualizedContainerService.HintSize="596,84" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+              <TryCatch.Variables>
+                <Variable x:TypeArguments="x:String" Name="loggTekst" />
+              </TryCatch.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <TryCatch.Try>
+                <Sequence DisplayName="Sequence logging" sap:VirtualizedContainerService.HintSize="558,560.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="Sequence Ny LoggLinje " sap:VirtualizedContainerService.HintSize="496,453.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap2010:Annotation.AnnotationText="(loggTekst som Variable)" DisplayName="Assign loggfilTekst " sap:VirtualizedContainerService.HintSize="434,115.333333333333" sap2010:WorkflowViewState.IdRef="Assign_11">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[loggTekst]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">["Forsøk nr. " + RetryTeller.ToString]</InArgument>
+                      </Assign.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Assign>
+                    <ui:AppendLine sap2010:Annotation.AnnotationText="Config som in-argument og dictionary&#xA;LogFil som in-argument og string&#xA;LogBane som in-argument og string" DisplayName="Append Line i loggfil" FileName="[logBane + loggfil]" sap:VirtualizedContainerService.HintSize="434,195.333333333333" sap2010:WorkflowViewState.IdRef="AppendLine_2" Text="[System.DateTime.now.ToString(&quot;HH:mm:ss.fff&quot;) +&quot; &quot;+ loggTekst]" UseDefaultEncoding="False">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:AppendLine>
+                  </Sequence>
+                </Sequence>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="562.666666666667,21.3333333333333" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                    <ui:LogMessage DisplayName="Log Message (Catch) Fikk ikke kontakt med loggfil :-/" sap:VirtualizedContainerService.HintSize="334,96" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;Fikk ikke kontakt med loggfil :-/&quot;]" />
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
+            <TryCatch DisplayName="Try Catch TolkFaktura_SalesForceConsumer" sap:VirtualizedContainerService.HintSize="596,53.3333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -196,7 +328,7 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <TryCatch DisplayName="Try Catch TolkFaktura_SalesForceUser" sap:VirtualizedContainerService.HintSize="434,54" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+            <TryCatch DisplayName="Try Catch TolkFaktura_SalesForceUser" sap:VirtualizedContainerService.HintSize="596,53.3333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -254,7 +386,7 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <TryCatch DisplayName="Try Catch TolkFaktura_SalesForceToken" sap:VirtualizedContainerService.HintSize="434,54" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+            <TryCatch DisplayName="Try Catch TolkFaktura_SalesForceToken" sap:VirtualizedContainerService.HintSize="596,53.3333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -312,6 +444,71 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
+            <TryCatch sap2010:Annotation.AnnotationText="&quot;Sjekker om boolean er True, akkurat nå er den &quot; + bolAssetsOK.toString" DisplayName="Ny loggLinje (Try Catch) &quot;Sjekker om boolean er True, akkurat nå er den &quot; + bolAssetsOK.toString" sap:VirtualizedContainerService.HintSize="596,84" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+              <TryCatch.Variables>
+                <Variable x:TypeArguments="x:String" Name="loggTekst" />
+              </TryCatch.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <TryCatch.Try>
+                <Sequence DisplayName="Sequence logging" sap:VirtualizedContainerService.HintSize="558,560.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="Sequence Ny LoggLinje " sap:VirtualizedContainerService.HintSize="496,453.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap2010:Annotation.AnnotationText="(loggTekst som Variable)" DisplayName="Assign loggfilTekst " sap:VirtualizedContainerService.HintSize="434,115.333333333333" sap2010:WorkflowViewState.IdRef="Assign_12">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[loggTekst]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">["Sjekker om boolean er True, akkurat nå er den " + bolAssetsOK.toString]</InArgument>
+                      </Assign.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Assign>
+                    <ui:AppendLine sap2010:Annotation.AnnotationText="Config som in-argument og dictionary&#xA;LogFil som in-argument og string&#xA;LogBane som in-argument og string" DisplayName="Append Line i loggfil" FileName="[logBane + loggfil]" sap:VirtualizedContainerService.HintSize="434,195.333333333333" sap2010:WorkflowViewState.IdRef="AppendLine_3" Text="[System.DateTime.now.ToString(&quot;HH:mm:ss.fff&quot;) +&quot; &quot;+ loggTekst]" UseDefaultEncoding="False">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:AppendLine>
+                  </Sequence>
+                </Sequence>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="562.666666666667,21.3333333333333" sap2010:WorkflowViewState.IdRef="Catch`1_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                    <ui:LogMessage DisplayName="Log Message (Catch) Fikk ikke kontakt med loggfil :-/" sap:VirtualizedContainerService.HintSize="334,96" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;Fikk ikke kontakt med loggfil :-/&quot;]" />
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
           </Sequence>
         </ActivityAction>
       </ui:RetryScope.ActivityBody>
@@ -321,8 +518,73 @@
         </ActivityFunc>
       </ui:RetryScope.Condition>
     </ui:RetryScope>
-    <ui:LogMessage DisplayName="Log Message Da er vi ute av RetryScope" sap:VirtualizedContainerService.HintSize="538,96" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Da er vi ute av RetryScope, etter forsøk nr. &quot; + RetryTeller. tostring]" />
-    <usa:SalesforceApplicationScope CustomServer="{x:Null}" DesignSalesforceConnectionInfo="{x:Null}" ExistingConnectionService="{x:Null}" Port="{x:Null}" ProxyPassword="{x:Null}" ProxyServer="{x:Null}" ProxyUser="{x:Null}" ConsumerKey="[salesForce_ConsumerKey]" ConsumerSecret="[salesForce_ConsumerSecret]" DisplayName="Salesforce Application Scope" sap:VirtualizedContainerService.HintSize="538,129.333333333333" sap2010:WorkflowViewState.IdRef="SalesforceApplicationScope_7" Password="[salesForce_Password]" ReportApiErrorAsException="False" SalesforceConnection="[out_ExistingSalesforceConnection]" SecurityToken="[salesForce_SecurityTolken]" ServerType="[salesForce_Server]" TelemetryEnabled="True" UseStrongDataTyping="False" Username="[salesForce_Username]">
+    <ui:LogMessage DisplayName="Log Message Da er vi ute av RetryScope" sap:VirtualizedContainerService.HintSize="700,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Da er vi ute av RetryScope, etter forsøk nr. &quot; + RetryTeller. tostring]" />
+    <TryCatch sap2010:Annotation.AnnotationText="&quot;Da er vi ute av RetryScope, etter forsøk nr. &quot; + RetryTeller. tostring" DisplayName="Ny loggLinje (Try Catch) &quot;Da er vi ute av RetryScope, etter forsøk nr. &quot; + RetryTeller. tostring" sap:VirtualizedContainerService.HintSize="700,84" sap2010:WorkflowViewState.IdRef="TryCatch_7">
+      <TryCatch.Variables>
+        <Variable x:TypeArguments="x:String" Name="loggTekst" />
+      </TryCatch.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch.Try>
+        <Sequence DisplayName="Sequence logging" sap:VirtualizedContainerService.HintSize="558,560.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_68">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Sequence Ny LoggLinje " sap:VirtualizedContainerService.HintSize="496,453.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_67">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap2010:Annotation.AnnotationText="(loggTekst som Variable)" DisplayName="Assign loggfilTekst " sap:VirtualizedContainerService.HintSize="434,115.333333333333" sap2010:WorkflowViewState.IdRef="Assign_13">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[loggTekst]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">["Da er vi ute av RetryScope, etter forsøk nr. " + RetryTeller. tostring]</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+            <ui:AppendLine sap2010:Annotation.AnnotationText="Config som in-argument og dictionary&#xA;LogFil som in-argument og string&#xA;LogBane som in-argument og string" DisplayName="Append Line i loggfil" FileName="[logBane + loggfil]" sap:VirtualizedContainerService.HintSize="434,195.333333333333" sap2010:WorkflowViewState.IdRef="AppendLine_4" Text="[System.DateTime.now.ToString(&quot;HH:mm:ss.fff&quot;) +&quot; &quot;+ loggTekst]" UseDefaultEncoding="False">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:AppendLine>
+          </Sequence>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="562.666666666667,21.3333333333333" sap2010:WorkflowViewState.IdRef="Catch`1_7">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <ui:LogMessage DisplayName="Log Message (Catch) Fikk ikke kontakt med loggfil :-/" sap:VirtualizedContainerService.HintSize="334,96" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;Fikk ikke kontakt med loggfil :-/&quot;]" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+    <usa:SalesforceApplicationScope CustomServer="{x:Null}" DesignSalesforceConnectionInfo="{x:Null}" ExistingConnectionService="{x:Null}" Port="{x:Null}" ProxyPassword="{x:Null}" ProxyServer="{x:Null}" ProxyUser="{x:Null}" ConsumerKey="[salesForce_ConsumerKey]" ConsumerSecret="[salesForce_ConsumerSecret]" DisplayName="Salesforce Application Scope" sap:VirtualizedContainerService.HintSize="700,128.666666666667" sap2010:WorkflowViewState.IdRef="SalesforceApplicationScope_7" Password="[salesForce_Password]" ReportApiErrorAsException="False" SalesforceConnection="[out_ExistingSalesforceConnection]" SecurityToken="[salesForce_SecurityTolken]" ServerType="[salesForce_Server]" TelemetryEnabled="True" UseStrongDataTyping="False" Username="[salesForce_Username]">
       <usa:SalesforceApplicationScope.Body>
         <ActivityAction x:TypeArguments="usc:IConnectionService">
           <ActivityAction.Argument>

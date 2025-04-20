@@ -18,7 +18,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1017.33333333333,5162</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1017.33333333333,5276</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="66">
@@ -100,7 +100,7 @@
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Tolk Faktura Kundesjekk&#xA;https://stash.adeo.no/scm/rpa/tolkfakturakundesjekk.git&#xA; &#xA;Overtatt som utvikler: Bjørn Rønnestad, bruk Teams! ved kontakt&#xA; &#xA;-------------------------------------------------------------&#xA;I denne prosessen er det Process som er main workflow. (Starter derfor akkurat her.)&#xA;-------------------------------------------------------------&#xA;&#xD;&#xA;Utviklingslogg i egen fil&#xA;" DisplayName="Process" sap:VirtualizedContainerService.HintSize="1027.33333333333,5097.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Tolk Faktura Kundesjekk&#xA;UTGÅTT: https://stash.adeo.no/scm/rpa/tolkfakturakundesjekk.git&#xA; &#xA;Overtatt som utvikler: Bjørn Rønnestad, bruk Teams! ved kontakt&#xA; &#xA;-------------------------------------------------------------&#xA;I denne prosessen er det Process som er main workflow. (Starter derfor akkurat her.)&#xA;-------------------------------------------------------------&#xA;&#xD;&#xA;Utviklingslogg i egen fil&#xA;" DisplayName="Process" sap:VirtualizedContainerService.HintSize="1027.33333333333,5211.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ss:SecureString" Name="exchangePassword" />
       <Variable x:TypeArguments="x:String" Name="exchangeUsername" />
@@ -115,13 +115,13 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Forbereder for logging" sap:VirtualizedContainerService.HintSize="965.333333333333,1068.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="Forbereder for logging" sap:VirtualizedContainerService.HintSize="965.333333333333,1062" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:CommentOut sap2010:Annotation.AnnotationText="Midlertidig prosess-snutt. Les om denne ved å gå inn i den første sequencen i denne Comment Out'en." DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,132.666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+      <ui:CommentOut sap2010:Annotation.AnnotationText="Midlertidig prosess-snutt. Les om denne ved å gå inn i den første sequencen i denne Comment Out'en." DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,129.333333333333" sap2010:WorkflowViewState.IdRef="CommentOut_3">
         <ui:CommentOut.Body>
           <Sequence DisplayName="Sekvens" sap:VirtualizedContainerService.HintSize="574,419.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_34">
             <sap:WorkflowViewStateService.ViewState>
@@ -270,33 +270,33 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:CommentOut>
       <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="388,56.6666666666667" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke init workflow" sap:VirtualizedContainerService.HintSize="388,115.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="init.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke init workflow" sap:VirtualizedContainerService.HintSize="388,114.666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="init.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <OutArgument x:TypeArguments="sd:DataTable" x:Key="Config">[Config]</OutArgument>
           <OutArgument x:TypeArguments="s:DateTime" x:Key="beginTime">[beginTime]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Sjekke_maskinmiljo workflow" sap:VirtualizedContainerService.HintSize="388,115.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Logging\Sjekke_maskinmiljo.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Sjekke_maskinmiljo workflow" sap:VirtualizedContainerService.HintSize="388,114.666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Logging\Sjekke_maskinmiljo.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <OutArgument x:TypeArguments="x:String" x:Key="logBane">[logBane]</OutArgument>
           <InArgument x:TypeArguments="sd:DataTable" x:Key="Config">[Config]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Opprett_LoggFile workflow" sap:VirtualizedContainerService.HintSize="388,115.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Logging\Opprett_LoggFile.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Opprett_LoggFile workflow" sap:VirtualizedContainerService.HintSize="388,114.666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Logging\Opprett_LoggFile.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <OutArgument x:TypeArguments="x:String" x:Key="loggfil">[loggfil]</OutArgument>
           <InArgument x:TypeArguments="sd:DataTable" x:Key="Config">[Config]</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="logBane">[logBane]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Loglinje workflow" sap:VirtualizedContainerService.HintSize="388,115.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Logging\Loglinje.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Loglinje workflow" sap:VirtualizedContainerService.HintSize="388,114.666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Logging\Loglinje.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="sd:DataTable" x:Key="Config">[Config]</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="logBane">[logBane]</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="loggfil">[loggfil]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Check_If_File_Is_Open workflow" sap:VirtualizedContainerService.HintSize="388,115.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Spesielt\Check_If_File_Is_Open.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Check_If_File_Is_Open workflow" sap:VirtualizedContainerService.HintSize="388,114.666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Spesielt\Check_If_File_Is_Open.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="sd:DataTable" x:Key="Config">[Config]</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="logBane">[logBane]</InArgument>
@@ -552,7 +552,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <TryCatch DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="965.333333333333,54" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="965.333333333333,53.3333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Variables>
         <Variable x:TypeArguments="x:String" Name="loggTekst" />
       </TryCatch.Variables>
@@ -1038,6 +1038,71 @@
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="965.333333333333,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_22" Level="Info" Message="[&quot;1 På alle forespørsler som er ok, skal det nå hentes ut alle AO. &quot;]" />
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="965.333333333333,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="Info" Message="[&quot;2 Hver SA sjekkes for om fakturagrunnlaget er kalkuleret.&quot;]" />
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="965.333333333333,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="Info" Message="[&quot;3 I så fall, meldes at AO er klar for fakturautkast.&quot;]" />
+    <TryCatch sap2010:Annotation.AnnotationText="Starter og sjekke AO-er for om SA-er er klare for fakturering" DisplayName="Ny loggLinje (Try Catch)" sap:VirtualizedContainerService.HintSize="965.333333333333,97.3333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_13">
+      <TryCatch.Variables>
+        <Variable x:TypeArguments="x:String" Name="loggTekst" />
+      </TryCatch.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch.Try>
+        <Sequence DisplayName="Sequence logging" sap:VirtualizedContainerService.HintSize="558,560.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_42">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Sequence Ny LoggLinje " sap:VirtualizedContainerService.HintSize="496,453.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_41">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap2010:Annotation.AnnotationText="(loggTekst som Variable)" DisplayName="Assign loggfilTekst " sap:VirtualizedContainerService.HintSize="434,115.333333333333" sap2010:WorkflowViewState.IdRef="Assign_16">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[loggTekst]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">Starter og sjekke AO-er for om SA-er er klare for fakturering</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+            <ui:AppendLine sap2010:Annotation.AnnotationText="Config som in-argument og dictionary&#xA;LogFil som in-argument og string&#xA;LogBane som in-argument og string" DisplayName="Append Line i loggfil" FileName="[logBane + loggfil]" sap:VirtualizedContainerService.HintSize="434,195.333333333333" sap2010:WorkflowViewState.IdRef="AppendLine_12" Text="[System.DateTime.now.ToString(&quot;HH:mm:ss.fff&quot;) +&quot; &quot;+ loggTekst]" UseDefaultEncoding="False">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:AppendLine>
+          </Sequence>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422,21" sap2010:WorkflowViewState.IdRef="Catch`1_13">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <ui:LogMessage DisplayName="Log Message (Catch) Fikk ikke kontakt med loggfil :-/" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_25" Level="Info" Message="[&quot;Fikk ikke kontakt med loggfil :-/&quot;]" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="965.333333333333,114.666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="SjekkOmArbeidsordreKanFaktureres.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_FilplasseringKontrollerteForespørsler">[in_FilplasseringKontrollerteForespørsler]</InArgument>
