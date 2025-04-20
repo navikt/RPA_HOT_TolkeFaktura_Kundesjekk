@@ -121,7 +121,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:CommentOut sap2010:Annotation.AnnotationText="Midlertidig prosess-snutt. Les om denne ved å gå inn i den første sequencen i denne Comment Out'en" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,132.666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+      <ui:CommentOut sap2010:Annotation.AnnotationText="Midlertidig prosess-snutt. Les om denne ved å gå inn i den første sequencen i denne Comment Out'en." DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,132.666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_3">
         <ui:CommentOut.Body>
           <Sequence DisplayName="Sekvens" sap:VirtualizedContainerService.HintSize="574,419.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_34">
             <sap:WorkflowViewStateService.ViewState>
