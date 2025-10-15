@@ -18,7 +18,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1017.33333333333,5276</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1017,5259</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="66">
@@ -100,7 +100,7 @@
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Tolk Faktura Kundesjekk&#xA;UTGÅTT: https://stash.adeo.no/scm/rpa/tolkfakturakundesjekk.git&#xA; &#xA;Overtatt som utvikler: Bjørn Rønnestad, bruk Teams! ved kontakt&#xA; &#xA;-------------------------------------------------------------&#xA;I denne prosessen er det Process som er main workflow. (Starter derfor akkurat her.)&#xA;-------------------------------------------------------------&#xA;&#xD;&#xA;Utviklingslogg i egen fil&#xA;" DisplayName="Process" sap:VirtualizedContainerService.HintSize="1027.33333333333,5211.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Tolk Faktura Kundesjekk&#xA;https://github.com/navikt/RPA_HOT_TolkeFaktura_Kundesjekk.git&#xA; &#xA;Overtatt som utvikler: Bjørn Rønnestad, bruk Teams! ved kontakt&#xA; &#xA;-------------------------------------------------------------&#xA;I denne prosessen er det Process som er main workflow. (Starter derfor akkurat her.)&#xA;-------------------------------------------------------------&#xA;&#xA;Utviklingslogg i egen fil&#xA;" DisplayName="Process" sap:VirtualizedContainerService.HintSize="1027,5194" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ss:SecureString" Name="exchangePassword" />
       <Variable x:TypeArguments="x:String" Name="exchangeUsername" />
@@ -115,21 +115,21 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Forbereder for logging" sap:VirtualizedContainerService.HintSize="965.333333333333,1062" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="Forbereder for logging" sap:VirtualizedContainerService.HintSize="965,1054" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:CommentOut sap2010:Annotation.AnnotationText="Midlertidig prosess-snutt. Les om denne ved å gå inn i den første sequencen i denne Comment Out'en." DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,129.333333333333" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+      <ui:CommentOut sap2010:Annotation.AnnotationText="Midlertidig prosess-snutt. Les om denne ved å gå inn i den første sequencen i denne Comment Out'en" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,124" sap2010:WorkflowViewState.IdRef="CommentOut_3">
         <ui:CommentOut.Body>
-          <Sequence DisplayName="Sekvens" sap:VirtualizedContainerService.HintSize="574,419.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_34">
+          <Sequence DisplayName="Sekvens" sap:VirtualizedContainerService.HintSize="574,417" sap2010:WorkflowViewState.IdRef="Sequence_34">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="LES OM DENNE SNUTTE HER" sap:VirtualizedContainerService.HintSize="512,84.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_33">
+            <Sequence DisplayName="LES OM DENNE SNUTTE HER" sap:VirtualizedContainerService.HintSize="820,81" sap2010:WorkflowViewState.IdRef="Sequence_33">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -146,13 +146,13 @@
                 </sap:WorkflowViewStateService.ViewState>
               </Sequence>
             </Sequence>
-            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,195.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_32">
+            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="820,192" sap2010:WorkflowViewState.IdRef="Sequence_32">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Let gjennom OeBS" sap:VirtualizedContainerService.HintSize="450,84.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_29">
+              <Sequence DisplayName="Let gjennom OeBS" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_29">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -269,14 +269,14 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:CommentOut>
-      <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="388,56.6666666666667" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke init workflow" sap:VirtualizedContainerService.HintSize="388,114.666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="init.xaml">
+      <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="388,56" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke init workflow" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="init.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <OutArgument x:TypeArguments="sd:DataTable" x:Key="Config">[Config]</OutArgument>
           <OutArgument x:TypeArguments="s:DateTime" x:Key="beginTime">[beginTime]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Sjekke_maskinmiljo workflow" sap:VirtualizedContainerService.HintSize="388,114.666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Logging\Sjekke_maskinmiljo.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Sjekke_maskinmiljo workflow" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Logging\Sjekke_maskinmiljo.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <OutArgument x:TypeArguments="x:String" x:Key="logBane">[logBane]</OutArgument>
           <InArgument x:TypeArguments="sd:DataTable" x:Key="Config">[Config]</InArgument>
